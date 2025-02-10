@@ -947,15 +947,15 @@
     <!-- 혜택 이벤트 -->
     <div class="section">
       <img
-        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250207-013857-235-53u5RdMn.png"
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250210-011143-511-pLc0OZxR.png"
         alt=""
       />
     </div>
 
     <!-- 익시오 -->
-    <div class="section">
+    <div class="section" id="ixio-section">
       <img
-        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250205-024717-522-OTBf0O8D.png"
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250210-112649-497-d9AEeTyB.png"
         alt="하단 내용 참조"
       />
       <a
@@ -1522,6 +1522,15 @@
     setTimeout(function () {
       postParam();
     }, 100);
+
+    // 250210 앵커 ixio-section 이동 추가
+    const urlParams = new URLSearchParams(window.location.search);
+    const section = urlParams.get("section");
+    if (section === "ixio") {
+      setTimeout(() => {
+        document.getElementById("ixio-section").scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
 
     // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
     window.accordianClick = accordianClick;
