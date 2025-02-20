@@ -1782,20 +1782,29 @@
       }
     }, 650);
   }
-
   function goSwiperActive(target) {
-    var goSlide = Number(target.getAttribute("data-go")) + 3;
+    // data-go 값을 1 빼서 0-based 인덱스로 변환
+    var slideIndex = Number(target.getAttribute("data-go")) - 1;
+
+    // 스크롤 위치 계산
     var targetOffsetTop =
       window.pageYOffset + document.querySelector(".event_detail .sliderAreaWrap").getBoundingClientRect().top - 50;
-    window.evtDetailSwiperIns.slideTo(goSlide);
-    //접근성 개선
-    var target = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
+
+    // slideToLoop를 사용하여 정확한 슬라이드로 이동
+    window.evtDetailSwiperIns.slideToLoop(slideIndex, 600);
+
+    // 접근성 개선
     setTimeout(() => {
-      if (!target.getAttribute("tabindex")) {
-        target.setAttribute("tabindex", 0);
+      var activeSlide = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
+      if (activeSlide) {
+        if (!activeSlide.getAttribute("tabindex")) {
+          activeSlide.setAttribute("tabindex", "0");
+        }
+        activeSlide.focus();
       }
-      target.focus();
-    }, 500);
+    }, 650);
+
+    // 부드러운 스크롤
     scrollTo(targetOffsetTop, 500);
   }
 
