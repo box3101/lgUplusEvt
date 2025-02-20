@@ -37,14 +37,33 @@
   .combination .ancorWrap ul {
     overflow: hidden;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .combination .ancorWrap ul li {
-    float: left;
-    width: 20%;
+    /* float: left; 
+    width: 20%;*/
+    height: 227px;
     display: block;
+    /* border-right: 1px solid #e5e5e5; */
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    position: relative;
     overflow: hidden;
-    border-right: 1px solid #e5e5e5;
+  }
+  .combination .ancorWrap ul li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .combination .ancorWrap ul li::before:last-child {
+    display: none;
   }
 
   .combination .ancorWrap ul li.bd_lft {
@@ -73,105 +92,127 @@
     position: relative;
     z-index: 0;
   }
-
   .combination .ancorWrap ul li.line1 button {
-    border-bottom: 1px solid #e5e5e5;
+    /* border-bottom: 1px solid #e5e5e5; */
   }
 
   .combination .ancorWrap ul li.line2 button {
-    padding-bottom: 55px;
+    /* padding-bottom: 55px; */
+    /* border-bottom: 1px solid #e5e5e5; */
+  }
+  .combination .ancorWrap ul li.line2 {
     border-bottom: 1px solid #e5e5e5;
   }
 
   /* 토스 */
-  .combination .ancorWrap ul li.logo1 button {
+  .combination .ancorWrap ul li.logo1 {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031613-673-DdJkMX0C.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo1 button:hover {
+  .combination .ancorWrap ul li.logo1:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031618-840-mhJwzO8T.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
   }
 
   /* SSG */
-  .combination .ancorWrap ul li.logo2 button {
+  .combination .ancorWrap ul li.logo2 {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031624-652-RnWo69Sz.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo2 button:hover {
+  .combination .ancorWrap ul li.logo2:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031629-801-D7YYM6zT.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
   }
 
   /* NPAY */
-  .combination .ancorWrap ul li.logo3 button {
+  .combination .ancorWrap ul li.logo3 {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031635-800-NGAvMPnK.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo3 button:hover {
+  .combination .ancorWrap ul li.logo3:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031640-275-fNnKiehg.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
   }
 
   /* GMARKET */
-  .combination .ancorWrap ul li.logo4 button {
+  .combination .ancorWrap ul li.logo4 {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031650-002-Fr1N3aJW.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo4 button:hover {
+  .combination .ancorWrap ul li.logo4:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031654-987-dN5NYYiJ.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
   }
 
   /* GS25 */
-  .combination .ancorWrap ul li.logo5 button {
+  .combination .ancorWrap ul li.logo5 {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031754-750-Nq4pGQjN.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo5 button:hover {
+  .combination .ancorWrap ul li.logo5:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031759-370-TsN7OdDn.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
   }
 
   /* KAKAO */
-  .combination .ancorWrap ul li.logo6 button {
+  .combination .ancorWrap ul li.logo6 {
+    position: relative;
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031804-301-Y4o2ubky.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo6 button:hover {
+  .combination .ancorWrap ul li.logo6:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031808-724-JxjxFZth.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
+  }
+  .combination .ancorWrap ul li.logo6 button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 77%);
   }
 
   /* HANA */
-  .combination .ancorWrap ul li.logo7 button {
+  .combination .ancorWrap ul li.logo7 {
+    position: relative;
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031815-881-KzdPhbZm.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
-  .combination .ancorWrap ul li.logo7 button:hover {
+  .combination .ancorWrap ul li.logo7:hover {
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-031821-384-GThhbuXx.png")
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #f8f8f8;
+  }
+  .combination .ancorWrap ul li.logo7 button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 81% 100%, 23% 100%, 0 96%);
   }
 
   .combination .cover {
@@ -186,8 +227,8 @@
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250218-030229-344-SjZKOS7s.png")
       no-repeat 0 0;
     background-size: 100%;
+    z-index: 5;
   }
-
   /* cont01 */
   .cont01 {
     margin-top: 119px;
