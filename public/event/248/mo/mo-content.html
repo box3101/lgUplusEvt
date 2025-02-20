@@ -24,12 +24,12 @@
 
   .cont_header2108 .combination2108 .ancorWrap {
     position: absolute;
-    bottom: 16.8%;
+    bottom: 12.8%;
     left: 0;
     width: 100%;
     box-sizing: border-box;
     padding: 0 9.4%;
-    height: 48%;
+    height: 51%;
   }
 
   .cont_header2108 .combination2108 .ancorWrap ul {
@@ -57,9 +57,9 @@
   }
 
   /* .cont_header2108 .combination2108 .ancorWrap ul li.logo1 {
-      top: 0;
-      right: 0;
-  } */
+        top: 0;
+        right: 0;
+    } */
 
   .cont_header2108 .combination2108 .ancorWrap ul li.logo2 {
     /* top: 19%; */
@@ -219,6 +219,7 @@
     margin: 0 auto;
     border-radius: 30px;
     background: #fff;
+    overflow: hidden;
   }
 
   .sliderAreaWrap .sliders .slick-prev.slick-arrow {
@@ -305,13 +306,13 @@
 
   /*스크롤일때*/
   /*.naviSlider {width:85%;margin:0 auto;overflow:hidden;overflow-x:scroll;white-space:nowrap;margin-bottom:-4px;}
-                  .naviSlider > li {width:33%;display:inline-block;position:relative;margin-right:-4px}
-                  .naviSlider li button .hov {display:none}
-                  .naviSlider li button .basic {display:block}
-                  .naviSlider li.on button .hov {display:block}
-                  .naviSlider li.on  button .basic {display:none}
-                  .naviSlider li + li::before {content:'';width:1px;height:50%;transform:translate(0, -50%);background:#e5e5e5;position:absolute;top:50%;left:0;}
-                  .naviSlider li.on + li:before {display:none}*/
+                    .naviSlider > li {width:33%;display:inline-block;position:relative;margin-right:-4px}
+                    .naviSlider li button .hov {display:none}
+                    .naviSlider li button .basic {display:block}
+                    .naviSlider li.on button .hov {display:block}
+                    .naviSlider li.on  button .basic {display:none}
+                    .naviSlider li + li::before {content:'';width:1px;height:50%;transform:translate(0, -50%);background:#e5e5e5;position:absolute;top:50%;left:0;}
+                    .naviSlider li.on + li:before {display:none}*/
 
   /*슬릭일때*/
   .naviSlider .slick-list.draggable {
@@ -390,9 +391,11 @@
   }
 
   .footerWrap .subDepth > ul > li {
-    font-size: 12px;
+    font-size: 13px;
     position: relative;
-    line-height: 18px;
+    font-weight: 500;
+    line-height: 150%; /* 39px */
+    letter-spacing: -0.52px;
   }
 
   .footerWrap .subDepth > ul > li + li {
@@ -405,32 +408,109 @@
   }
 
   .acType .titType {
-    background: url("/common/images/hphn/event/ev5736/renew/ev5736_m_footer_q.png") no-repeat;
-    background-size: 100%;
-    align-items: center;
+    /* background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042926-227-aWmVsAA9.png")
+      no-repeat;
+    background-size: 100%; */
+    align-items: flex-start;
     text-align: left;
     display: flex;
     width: 100%;
-    height: 0;
+    height: auto;
     margin-bottom: 7%;
-    padding: 7.5% 0 8.5%;
+    padding: 0;
+    /* padding: 5.5% 0; */
+    position: relative;
   }
+
+  /* .acType .titType.v2 {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042930-954-kyrjYja0.png")
+      no-repeat;
+    background-size: 100%;
+  }
+
+  .acType .titType.v3 {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042934-769-VUo9FIgP.png")
+      no-repeat;
+    background-size: 100%;
+  } */
+
+  .acType .titType .profile {
+    display: inline-block;
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250219-113005-789-tRujseyq.png")
+      no-repeat;
+    background-size: 100%;
+    width: 11vw;
+    height: 11vw;
+    flex-shrink: 0;
+  }
+
+  .acType .titType .titType-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5.5% 0 5.5% 5.5%;
+    margin-left: 3.4vw;
+    border: 1px solid #e0e0ec;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  .acType .titType .titType-box::before {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250219-014137-189-k19SYmWP.png")
+      no-repeat;
+    background-size: 100%;
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 12px;
+    position: absolute;
+    top: 16px;
+    left: -9px;
+    /* margin-top: -6px;
+    margin-left: -5px;
+    width: 8px;
+    height: 8px; 
+    border: 1px solid #e0e0ec;
+    border-right: none;
+    border-bottom: none;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); */
+  }
+  /* .acType .titType {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 84%;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    border-right: 1px solid #e0e0ec;
+    border-bottom: 1px solid #e0e0ec;
+    border-left: 1px solid #e0e0ec;
+    border-radius: 0 0 16px 16px;
+    background-color: #fff;
+  } */
 
   .acType .titType .question {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 19%;
-    font-weight: bold;
+    /* padding-left: 21%; */
     color: #000;
     font-size: 13px;
     width: 90%;
+    font-weight: 700;
+    line-height: 150%; /* 39px */
+    letter-spacing: -0.52px;
   }
 
   .acType .titType .arrow {
     position: relative;
+    margin-right: 1vw;
     width: 32px;
     height: 20px;
     display: block;
+    flex-shrink: 0;
   }
 
   .acType .titType .arrow:before {
@@ -482,9 +562,8 @@
     display: block;
     background: url("/common/images/hphn/event/ev5736/renew/ev5736_m_footer_a.png") no-repeat;
     background-size: 100%;
-    height: 70px;
-    min-width: 35px;
-    width: 12%;
+    width: 11vw;
+    height: 11vw;
     position: absolute;
     right: 0;
   }
@@ -503,8 +582,8 @@
     height: 13px;
     width: 13px;
     position: absolute;
-    right: 16%;
-    top: 24px;
+    left: 0;
+    top: 0;
   }
 
   /* 유투브 모달 */
@@ -607,7 +686,7 @@
     border-radius: 0 0 25px 25px;
   }
   .m-swiper.swiper-e-normal .swiper-slide {
-    padding: 0 12px;
+    padding: 0 12px 12px;
   }
   .m-swiper.swiper-e-multiple {
     position: relative;
@@ -644,6 +723,8 @@
     left: -9%;
     top: 50%;
     background-image: none;
+    position: absolute;
+    z-index: 1;
   }
 
   .m-swiper.swiper-e-multiple .swiper-button-prev:before {
@@ -671,6 +752,8 @@
     right: -9%;
     top: 50%;
     background-image: none;
+    position: absolute;
+    z-index: 1;
   }
 
   .m-swiper.swiper-e-multiple .swiper-button-next:before {
@@ -727,7 +810,7 @@
     <div class="combination2108">
       <img
         alt="(자세한 내용 하단 참고)"
-        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230925-013102-377-CnF7jTmh.png"
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-030541-918-4oToBNoD.png"
       />
       <div class="blind">
         <p>유플러스닷컴에서 드리는 제휴 할인 혜택</p>
@@ -736,54 +819,59 @@
       </div>
       <div class="ancorWrap">
         <ul>
-          <li class="logo0"><button onclick="goSwiperActive(this)" data-go="1">토스</button></li>
-          <!-- <li class="logo1"><button onclick="goSwiperActive(this)" data-go="2">유독</button></li> -->
-          <li class="logo2"><button onclick="goSwiperActive(this)" data-go="2">SSG 페이</button></li>
-          <li class="logo3"><button onclick="goSwiperActive(this)" data-go="3">네이버페이 포인트</button></li>
-          <li class="logo4"><button onclick="goSwiperActive(this)" data-go="4">g마켓/옥션 스마일캐시</button></li>
-          <li class="logo5"><button onclick="goSwiperActive(this)" data-go="5">gs25 상품권</button></li>
-          <!-- <li class="logo6"><button onclick="goSwiperActive(this)" data-go="6">gs프레스몰 할인쿠폰</button></li> -->
-          <li class="logo6"><button onclick="goSwiperActive(this)" data-go="6">카카오t할인쿠폰</button></li>
-          <li class="logo7"><button onclick="goSwiperActive(this)" data-go="7">하나머니</button></li>
-          <li class="logo8"><button onclick="goSwiperActive(this)" data-go="8">요기요 할인쿠폰</button></li>
+          <li class="logo0">
+            <button onclick="goSwiperActive(this)" data-go="1">토스</button>
+          </li>
+          <li class="logo2">
+            <button onclick="goSwiperActive(this)" data-go="2">SSG 페이</button>
+          </li>
+          <li class="logo3">
+            <button onclick="goSwiperActive(this)" data-go="3">네이버페이 포인트</button>
+          </li>
+          <li class="logo4">
+            <button onclick="goSwiperActive(this)" data-go="4">g마켓/옥션 스마일캐시</button>
+          </li>
+          <li class="logo5">
+            <button onclick="goSwiperActive(this)" data-go="5">gs25 상품권</button>
+          </li>
+          <li class="logo6">
+            <button onclick="goSwiperActive(this)" data-go="6">카카오t할인쿠폰</button>
+          </li>
+          <li class="logo7">
+            <button onclick="goSwiperActive(this)" data-go="7">하나머니</button>
+          </li>
         </ul>
       </div>
     </div>
     <div class="blind">8개 제휴사 중 택1</div>
   </div>
+
   <div class="event_detail cont01 tabs_conts_wrap">
     <img
       alt="요금제별 쿠폰 금액을 확인해 주세요!"
-      src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont01_tit.jpg"
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-030548-554-5RFQ6KJK.png"
     />
     <div class="cont01_tab_wrap">
       <ul class="inner">
-        <li
-          class="tabs_btns tab01 on"
-          data-idx="1"
-          onclick="tabsClick(this)"
-          aria-controls="tab1_5G"
-          aria-selected="ture"
-        >
-          <button><span>5G 요금제</span></button>
+        <li class="tabs_btns tab01 on" data-idx="1" role="none">
+          <button onclick="tabsClick(this)" aria-controls="tab1_5G" aria-selected="ture" role="tab">
+            <span>5G 요금제</span>
+          </button>
         </li>
-        <li
-          class="tabs_btns tab02"
-          data-idx="2"
-          onclick="tabsClick(this)"
-          aria-controls="tab2_LTE"
-          aria-selected="false"
-        >
-          <button><span>LTE 요금제</span></button>
+        <li class="tabs_btns tab02" data-idx="2" role="none">
+          <button onclick="tabsClick(this)" aria-controls="tab2_LTE" aria-selected="false" role="tab">
+            <span>LTE 요금제</span>
+          </button>
         </li>
       </ul>
     </div>
     <div id="tab1_5G" aria-labelledby="tab1_5G" class="cont01_tab_cont tabs_conts">
       <img
+        aria-describedby="5grate-coupon-table"
         alt="(자세한 내용 하단 참고)"
-        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230714-031709-561-Vo15QzNy.jpg"
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-030553-632-msxGeSm6.png"
       />
-      <div class="blind">
+      <div class="blind" id="5grate-coupon-table">
         <table>
           <caption>
             5G 요금제별 쿠폰 금액 표입니다.
@@ -828,10 +916,11 @@
     </div>
     <div id="tab2_LTE" aria-labelledby="tab2_LTE" class="cont01_tab_cont tabs_conts" style="display: none">
       <img
+        aria-describedby="lterate-coupon-table"
         alt="(자세한 내용 하단 참고)"
-        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230714-031705-893-z3Kzfox5.jpg"
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-030557-557-g6nx40in.png"
       />
-      <div class="blind">
+      <div class="blind" id="lterate-coupon-table">
         <table>
           <caption>
             LTE 요금제별 쿠폰 금액 표입니다.
@@ -874,10 +963,11 @@
     </p>
     <!-- <p style="padding:20px;text-align:center;font-size:14px;letter-spacing:-1px">※ 다이렉트요금제 4종, 7,000원추가 프로모션 진행중</p> -->
   </div>
+
   <div class="event_detail cont02">
     <img
       alt="(자세한 내용 하단 참고)"
-      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230214-115038-972-ecrh2iFx.jpg"
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250220-095032-904-7q77qwcm.png"
     />
     <div class="blind">
       <h3>쇼핑쿠폰 이렇게 발급됩니다!</h3>
@@ -896,14 +986,15 @@
       </dl>
     </div>
   </div>
+
   <div class="event_detail cont03">
     <img
-      alt="(자세한 내용 하단 참고)"
-      src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_tit.jpg"
+      alt="제휴사 별 쿠폰 사용방법을 알려드려요!"
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-030607-220-79LN6MV2.png"
     />
     <div class="sliderAreaWrap">
       <div class="sliders">
-        <div class="m-swiper swiper-e-multiple naviSlider" data-event-carousel>
+        <div class="m-swiper swiper-e-multiple naviSlider">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -917,21 +1008,15 @@
                   <img
                     alt="toss, 토스 포인트"
                     class="basic"
-                    src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230220-020458-454-hkGzBlv1.png"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042516-251-D3OS4PWA.png"
                   />
                   <img
                     alt="toss, 토스 포인트"
                     class="hov"
-                    src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230220-020504-185-6YSQPzGm.png"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042521-146-vVwzsK39.png"
                   />
                 </button>
               </div>
-              <!-- <div class="swiper-slide">
-                                  <button type="button" class="nav-01" data-go="2" onclick="swiperActiveSlide(this)">
-                                      <img alt="유독, 유독 요금할인" class="basic" src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-092121-042-p1BfLe1K.png" />
-                                      <img alt="유독, 유독 요금할인" class="hov" src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-092136-885-AvVXtDnz.png" />
-                                  </button>
-                              </div> -->
               <div class="swiper-slide">
                 <button
                   type="button"
@@ -943,12 +1028,12 @@
                   <img
                     alt="SSGPAY, SSGPAY SSG머니"
                     class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_ssg.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042526-561-PNOiJYdK.png"
                   />
                   <img
                     alt="SSGPAY, SSGPAY SSG머니"
                     class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_ssg.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042530-363-b9CeySns.png"
                   />
                 </button>
               </div>
@@ -963,12 +1048,12 @@
                   <img
                     alt="N Pay, 네이버페이 포인트"
                     class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log01.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042535-439-Gr1ykLUG.png"
                   />
                   <img
                     alt="N Pay, 네이버페이 포인트"
                     class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_01.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042539-711-O4DwDeDL.png"
                   />
                 </button>
               </div>
@@ -983,12 +1068,12 @@
                   <img
                     alt="Gmarket, G마켓/옥션 스마일캐시"
                     class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log02.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042600-540-78csKi7m.png"
                   />
                   <img
                     alt="Gmarket, G마켓/옥션 스마일캐시"
                     class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_02.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042604-877-hgFn05DT.png"
                   />
                 </button>
               </div>
@@ -1003,25 +1088,19 @@
                   <img
                     alt="GS25, GS25 상품권"
                     class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log03.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042701-563-8QxHvugY.png"
                   />
                   <img
                     alt="GS25, GS25 상품권"
                     class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_03.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042706-045-CVT1KwtD.png"
                   />
                 </button>
               </div>
-              <!-- <div class="swiper-slide">
-                                  <button type="button" class="nav-06" data-go="6" onclick="swiperActiveSlide(this)" aria-labelledby="slide6">
-                                      <img alt="GS Fresh Mall, GS 프레시몰 할인쿠폰" class="basic" src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log04.jpg" />
-                                      <img alt="GS Fresh Mall, GS 프레시몰 할인쿠폰" class="hov" src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_04.jpg" />
-                                  </button>
-                              </div> -->
               <div class="swiper-slide">
                 <button
                   type="button"
-                  class="nav-07"
+                  class="nav-06"
                   data-go="6"
                   onclick="swiperActiveSlide(this)"
                   aria-labelledby="slide6"
@@ -1029,19 +1108,19 @@
                   <img
                     alt="kakaoT, 카카오T 할인쿠폰"
                     class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log06.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042712-217-MDn1Y0ve.png"
                   />
                   <img
                     alt="kakaoT, 카카오T 할인쿠폰"
                     class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_06.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042716-268-MrElPoPf.png"
                   />
                 </button>
               </div>
               <div class="swiper-slide">
                 <button
                   type="button"
-                  class="nav-08"
+                  class="nav-07"
                   data-go="7"
                   onclick="swiperActiveSlide(this)"
                   aria-labelledby="slide7"
@@ -1049,32 +1128,12 @@
                   <img
                     alt="하나머니"
                     class="basic"
-                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230809-020816-950-V8vW5S3j.png"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042720-510-guslNZkg.png"
                   />
                   <img
                     alt="하나머니"
                     class="hov"
-                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230809-021908-889-qjJtXWZG.png"
-                  />
-                </button>
-              </div>
-              <div class="swiper-slide">
-                <button
-                  type="button"
-                  class="nav-09"
-                  data-go="8"
-                  onclick="swiperActiveSlide(this)"
-                  aria-labelledby="slide8"
-                >
-                  <img
-                    alt="요기요, 요기요 할인쿠폰"
-                    class="basic"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log08.jpg"
-                  />
-                  <img
-                    alt="요기요, 요기요 할인쿠폰"
-                    class="hov"
-                    src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_log_hv_08.jpg"
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042724-462-mvjPB0hx.png"
                   />
                 </button>
               </div>
@@ -1087,13 +1146,13 @@
             <span class="is-blind">다음 슬라이드로 가기</span>
           </button>
         </div>
-        <div class="m-swiper swiper-e-normal" data-event-carousel>
+        <div class="m-swiper swiper-e-normal">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230809-020841-847-SM5tVVEW.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042814-918-pgQ9vMvp.png"
                 />
                 <div class="blind" id="slide1">
                   <h3>토스 포인트</h3>
@@ -1118,30 +1177,10 @@
                   </ul>
                 </div>
               </div>
-              <!-- <div class="swiper-slide">
-                                  <img alt="(자세한 내용 하단 참고)" src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230104-054220-054-4K9Zk9KM.png" />
-                                  <div class="blind">
-                                      <h3>유독 요금할인</h3>
-                                      <p>(신규제휴사) 유독 쿠폰 이미지</p>
-                                      <p>유독 서비스 사용 고객님에게 유독 사용요금 할인해 드립니다.</p>                                        
-                                      <h4>쿠폰 등록방법</h4>
-                                      <dl>
-                                          <dt>STEP01</dt>
-                                          <dd>고객님께 문자로 전송된 유독 요금할인 MMS를 확인합니다. (매월 3일)</dd>
-                                          <dt>STEP02</dt>
-                                          <dd>유독 요금할인이 자동으로 적용됩니다.</dd>
-                                      </dl>
-                                      <h4>쿠폰 사용 시 유의사항</h4>
-                                      <ul>
-                                          <li>- 유독 요금할인 쿠폰팩은 자동으로 적용되어 등록 절차가 필요 없습니다.</li>
-                                          <li>- 유독 사용시에만 쿠폰이 적용됩니다.</li>                                            
-                                      </ul>
-                                  </div>
-                              </div> -->
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102611-070-5YVdH45B.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250220-104420-237-CMWM3FPV.png"
                 />
                 <div class="blind" id="slide2">
                   <h3>SSGPAY SSG머니</h3>
@@ -1173,7 +1212,7 @@
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102627-607-tFxFLJjM.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042828-376-6yLZoDzZ.png"
                 />
                 <div class="blind" id="slide3">
                   <h3>네이버페이 포인트</h3>
@@ -1201,7 +1240,7 @@
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102727-667-D2EDvD9v.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250220-104409-441-eXXx1x3S.png"
                 />
                 <div class="blind" id="slide4">
                   <h3>G마켓/옥션 스마일캐시</h3>
@@ -1226,7 +1265,7 @@
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102531-354-JypsRYH3.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250220-104358-308-IfvHVoRG.png"
                 />
                 <div class="blind" id="slide5">
                   <h3>GS25 편의점 상품권</h3>
@@ -1252,34 +1291,12 @@
                   </ul>
                 </div>
               </div>
-              <!-- <div class="swiper-slide">
-                                  <img alt="(자세한 내용 하단 참고)" src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102554-309-vjoiePRu.png" />
-                                  <div class="blind" id="slide6">
-                                      <h3>GS 프레시몰 할인쿠폰</h3>
-                                      <p>GS Frech Mall. COUPON 이미지</p>
-                                      <p>GS 프레시몰에서 선식품 부터 다양한 밀키트, 생활가전 구매 시 사용 가능한 쿠폰입니다.</p>
-                                      <h4>쿠폰 등록방법</h4>
-                                      <dl>
-                                          <dt>STEP 01</dt>
-                                          <dd>고객님께 문자로 전송된 GS 프레시몰 할인쿠폰을 확인합니다. (매월 3일)</dd>
-                                          <dt>STEP 02</dt>
-                                          <dd>GS 프레시몰 APP 또는 Web에 접속하여 마이페이지 > 로그인 > 쿠폰메뉴에서 쿠폰 번호를 입력 후 등록 버튼을 클릭 해주세요.</dd>
-                                      </dl>
-                                      <h4>쿠폰 사용 시 유의사항</h4>
-                                      <ul>
-                                          <li>- 쿠폰금액 이상 주문 시 쿠폰 사용 가능합니다. (5천원 이상 주문 시 5천원 할인쿠폰 사용 가능)</li>
-                                          <li>- 타 쿠폰과 중복 사용이 불가합니다.</li>
-                                          <li>- 쿠폰은 분할 사용 불가합니다.</li>
-                                          <li>- 업체택배 상품 구매 시 쿠폰 사용이 불가합니다.</li>
-                                      </ul>
-                                  </div>
-                              </div> -->
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102758-006-HcohKcab.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042845-652-X98ivEuk.png"
                 />
-                <div class="blind" id="slide7">
+                <div class="blind" id="slide6">
                   <h3>카카오T 할인쿠폰</h3>
                   <p>kakaoT COUPON 이미지</p>
                   <p>카카오 택시와 카카오 대리 서비스 이용 시 사용 할 수 있는 쿠폰입니다.</p>
@@ -1306,9 +1323,9 @@
               <div class="swiper-slide">
                 <img
                   alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230809-032103-674-3OBjkxZn.png"
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250218-042850-030-mvf6viIV.png"
                 />
-                <div class="blind" id="slide8">
+                <div class="blind" id="slide7">
                   <h3>하나머니</h3>
                   <p>HANA MONEY COUPON</p>
                   <p>
@@ -1333,45 +1350,19 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <img
-                  alt="(자세한 내용 하단 참고)"
-                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230106-102642-013-qtqQZlIW.png"
-                />
-                <div class="blind" id="slide9">
-                  <h3>요기요 할인쿠폰</h3>
-                  <p>요기요 COUPON 이미지</p>
-                  <p>기다림 없는 맛집배달앱 요기요에서 음식 배달 시 사용 가능한 쿠폰입니다.</p>
-                  <h4>쿠폰 등록방법</h4>
-                  <dl>
-                    <dt>STEP 01</dt>
-                    <dd>고객님께 문자로 전송된 요기요 할인쿠폰을 확인합니다. (매월 3일)</dd>
-                    <dt>STEP 02</dt>
-                    <dd>
-                      요기요 APP에 접속하여 마이 요기요 > 요기요 선물하기 메뉴에서 우측 상단 선물아이콘을 클릭 후 선물
-                      코드 입력 후 등록 버튼을 클릭 해주세요
-                    </dd>
-                  </dl>
-                  <h4>쿠폰 사용 시 유의사항</h4>
-                  <ul>
-                    <li>- 쿠폰금액 이상 주문 시 쿠폰 사용 가능합니다. (5천원 이상 주문 시 5천원 할인쿠폰 사용 가능)</li>
-                    <li>- 쿠폰은 분할 사용이 가능합니다.</li>
-                    <li>- 타 쿠폰과 중복 사용이 불가합니다.</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- 2023.09.11 임시 비노출 -->
+      <!-- 2023.09.11 임시 비노출 처리 -->
       <!-- <img alt="쇼핑쿠폰팩사용꿀팁보기" src="https://image.lguplus.com/common/images/hphn/event/ev5736/renew/ev5736_m_cont03_vedio.jpg" />
-              <button class="vedioButton event_modal_open1" data-url="x5kN2noUM50" onclick="openLayerEvent(this)" data-layer="event_modal_layer1">
-                  쇼핑쿠폰팩사용꿀팁보기
-              </button> -->
-      <!-- //2023.09.11 임시 비노출 -->
+                <button class="vedioButton event_modal_open1" data-url="x5kN2noUM50" onclick="openLayerEvent(this)" data-layer="event_modal_layer1">
+                    쇼핑쿠폰팩사용꿀팁보기
+                </button> -->
+      <!-- //2023.09.11 임시 비노출 처리 -->
     </div>
   </div>
+
   <div class="footerWrap">
     <img
       alt="궁금하신 내용을 확인하세요!"
@@ -1380,142 +1371,216 @@
     <div class="acType">
       <div id="accordion" class="accordions_conts_wrap">
         <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_001">
-          <span class="question"><i class="ico-question">질문</i> 요금 미납 시 쿠폰 재발급 방법이 궁금해요.</span>
-          <i class="arrow"></i>
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              쿠폰 발송 일정이 궁금해요.
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_001" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              1) 전월 말일 기준, 요금 미납이 확인된 경우에는 월 초 쿠폰이 지급되지 않습니다.<br />
-              하지만 요금 납부일을 경과한 후 미납금을 납부하신 경우 해당 고객님을 대상으로 매월 7일, 11일, 15일 추가로
-              쿠폰을 발송해 드립니다.<br />
-              단, 납부 금액 확인 후 시스템 반영까지 약 3일 정도 소요되어 주말을 제외하고 최소 3~4일 전 납부가 완료되어야
-              15일 발송이 가능합니다.
-            </li>
-            <li>
-              2) 요금 미납 후 3개월 이내 미납요금을 모두 납부하신 경우, 요금을 납부하신 다음달 3일(주말 및 공휴일의 경우
-              다음 영업일) 미지급된 쿠폰을(최대 3회차) 소급하여 발송해 드립니다.
+              매월 3일(주말 및 공휴일은 첫 번째 영업일) 이후 문자로 발송되며, 발송일 기준 3~4일 전 휴대폰 요금을
+              완납하셔야만 쿠폰이 발송됩니다. 만약 1차 발송일 이후 요금을 완납하실 경우 2~4차 발송일(7, 11, 15일) 중
+              가장 빠른 날짜에 1회 발송됩니다.(단, 요금 완납 시)
             </li>
           </ul>
         </div>
-        <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_002">
-          <span class="question"><i class="ico-question">질문</i> 휴대폰 번호 변경 시에는 어떻게 되나요?</span>
-          <i class="arrow"></i>
+
+        <button class="titType v2" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_002">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              요금 미납 시 쿠폰 재발급 방법이<br />
+              궁금해요.
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_002" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              휴대폰 번호를 변경하시고 고객센터를 통해 번호 변경 내용을 말씀해주신 경우 휴대폰 번호를 변경한 다음달부터
-              변경된 휴대폰 번호로 쿠폰이 지급됩니다.<br />
-              (예시 : 6월 15일 휴대폰 번호 변경 시 7월 3일에 변경된 휴대폰 번호로 쿠폰 지급)
+              요금 연체로 인해 쿠폰을 받지 못하였을 경우. 모든 연체요금을 완납한 이후 도래하는 첫 번째 발송일에 미지급된
+              쿠폰을 소급하여 발송해 드립니다.(당월분을 포함하여 최대 3매 발송)
             </li>
           </ul>
         </div>
+
         <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_003">
-          <span class="question"><i class="ico-question">질문</i> 요금제 변경 시 쿠폰 금액이 변경되나요?</span>
-          <i class="arrow"></i>
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              휴대폰 번호 변경 시에는 어떻게 되나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_003" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              요금제 변경 시 다다음달부터 변경하신 요금제 기준의 쿠폰이 발급됩니다. 예시 : 6월 15일 5G라이트(쿠폰금액
-              3,000원)에서 5G스탠다드 (쿠폰금액 5,000원)로 변경 시 7월 3일 : 3,000원 쿠폰 발급 , 8월 3일 : 5,000원 쿠폰
-              발급
+              휴대폰 번호를 변경하시고 고객센터를 통해 번호 변경 사실을 알려주셔야만 변경된 휴대폰 번호로 쿠폰이
+              발송됩니다.(번호 변경 시 다른 고객님께 쿠폰이 발송될 수 있기 때문에 발송이 중단됩니다.)
             </li>
           </ul>
         </div>
-        <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_004">
-          <span class="question"><i class="ico-question">질문</i> 쿠폰 신청방법을 알려주세요.</span>
-          <i class="arrow"></i>
+
+        <button class="titType v2" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_004">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              요금제를 변경할 경우 쿠폰 지급액은 어떻게<br />바뀌나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_004" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              · 유플러스 닷컴에서 휴대폰, 유심 가입 신청 단계에서 쇼핑쿠폰팩 중 원하는 제휴사 쿠폰을 선택해주세요. ·
-              고객님이 선택하신 요금제에 따라 제공 쿠폰 금액이 달라집니다.
-            </li>
-            <li>
-              [유의사항]<br />
-              ※ 쿠폰은 1개만 선택 가능합니다. (추후 변경 가능)<br />
-              ※ 유플러스 닷컴 상담사를 통한 가입 / 개통 시에도 쿠폰 선택이 가능합니다.<br />
-              ※ LTE 7% 요금할인을 선택하신 경우, 쇼핑쿠폰팩과 중복신청이 불가능합니다.<br />
-              ※ 매장방문하여 받을 시에는 쇼핑쿠폰이 제공되지 않습니다.
+              요금제를 변경하신 다다음 달 발송 회차부터 변경한 요금제 기준의 지급액이 적용됩니다.<br />
+              (예시: 2월 1일 5G 라이트 -> 5G 시그니처 변경 시, 3월: 5G 라이트 요금제 지급액, 4월: 5G 시그니처 지급액
+              적용)
             </li>
           </ul>
         </div>
-        <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_005">
-          <span class="question"><i class="ico-question">질문</i> 쿠폰 지급 대상은 어떻게 되나요?</span>
-          <i class="arrow"></i>
+
+        <button class="titType v2" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_005">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              개통 후 24개월이 지나기 전에 다시 기기<br />
+              변경을 할 경우 쿠폰 지급은 어떻게 되나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_005" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              · 유플러스 닷컴에서 휴대폰 또는 유심가입 시 쇼핑쿠폰팩의 제휴사 쿠폰을 선택하고 개통완료 한 고객<br />
-              · 유플러스 닷컴 상담사를 통해 휴대폰 또는 유심가입 시 개통 제휴사 쿠폰을 선택하고 개통완료 한 고객.
-            </li>
-            <li>
-              [지급 불가기준 안내]<br />
-              1) 쇼핑쿠폰팩 제공 미대상 요금제 가입 고객<br />
-              2) 휴대폰 일시정지 및 해지 고객<br />
-              3) 타 대리점으로 기기변경 고객<br />
-              4) 요금 미납 고객
+              개통 후 24개월 이내에 유플러스 닷컴에서 재차 기기변경을 하실 경우 새로운 가입내역에 해당하는 쿠폰이
+              지급되고 기존 지급은 종료됩니다.(중복 지급 불가) 또한 유플러스닷컴이 아닌 타 채널에서 기기변경을 하실 경우
+              쿠폰 지급이 종료됩니다.
             </li>
           </ul>
         </div>
-        <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_006">
-          <span class="question"><i class="ico-question">질문</i> 쿠폰 발급/사용 방법이 궁금해요</span>
-          <i class="arrow"></i>
+
+        <button class="titType v3" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_006">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              제 명의로 휴대폰 번호를 여러 개 쓰고<br />
+              있는데, 개통 번호가 아닌 다른 번호로 쿠폰을<br />
+              받고 싶어요.
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_006" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              1) 쿠폰 발급 방법<br />
-              선택하신 쿠폰은 개통월 기준 다음달 요금납부 고객님에 한해 다다음달 3일(주말 및 공휴일의 경우 다음 영업일)
-              문자(MMS)로 발송됩니다.<br />(예시 : 6월 개통 시 7월 요금납부 고객님에 한해 8월 3일 문자메세지로 쿠폰
-              전송)
-            </li>
-            <li>
-              2) 쿠폰 제공기간<br />
-              최초 쿠폰 수령일로부터 매월 1회, 24개월간 제공됩니다.
-            </li>
-            <li>
-              3) 쿠폰 사용방법<br />
-              고객님께 발송해드린 문자메세지의 쿠폰등록방법을 통해 해당 제휴사에서 쿠폰을 등록해 주시면 됩니다.<br />
-              단, GS25 편의점 상품권의 경우, 쿠폰 등록 없이 편의점에서 바로 사용 가능합니다.
-            </li>
-            <li>
-              4) 쿠폰 사용기간<br />
-              쿠폰을 수령한 해당 월의 말일까지 사용 가능합니다.<br />
-              (예시 : 8월 3일 쿠폰 수령 시 8월 31일 23시 59분까지 사용 가능)
+              쇼핑쿠폰팩은 개통한 번호로만 발송이 가능하며, 다른 번호로는 수신이 불가합니다. 명의자가 미성년자일
+              경우에만 유플러스에 가입된 대표 법정대리인의 휴대폰 번호로 쿠폰을 받을 수 있습니다.(고객센터를 통해
+              수신번호 변경 요청)
             </li>
           </ul>
         </div>
-        <button class="titType" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_007">
-          <span class="question"
-            ><i class="ico-question">질문</i> 다이렉트 요금제 이용 시 참 쉬운 가족 결합 중복 혜택이 가능한가요?</span
-          >
-          <i class="arrow"></i>
+
+        <button class="titType v2" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_007">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              매장 방문 예약 시에도 쿠폰이 지급<br />
+              되나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
         </button>
         <div id="_accordion_007" class="subDepth">
-          <p><i class="ico-answer">답변</i></p>
+          <p><span class="ico-answer">답변</span></p>
+          <ul>
+            <li>매장방문예약, 매장온라인주문은 쿠폰이 지급되지 않습니다.</li>
+          </ul>
+        </div>
+
+        <button class="titType v2" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_008">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              다이렉트 요금제를 사용 중인데 쿠폰이<br />
+              지급되나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
+        </button>
+        <div id="_accordion_008" class="subDepth">
+          <p><span class="ico-answer">답변</span></p>
           <ul>
             <li>
-              다이렉트 요금제로 참 쉬운 가족 결합 시 쇼핑쿠폰이 지급되지 않습니다. (매월 말일 기준)<br />
-              예시 : 2월 20일 다이이렉트 요금제 가입 후 익익월인 4월 3일 쇼핑쿠폰팩을 받고, 4월 중 참 쉬운 가족 결합을
-              한 경우 5월부터 쇼핑쿠폰 미발급<br />
-              단, 6월 중 참 쉬운 가족 결합을 해지한 경우 7월 3일 쇼핑쿠폰팩 발급
+              다이렉트 요금제 + 참쉬운결합이 적용된 고객님은 쇼핑쿠폰팩이 지급되지 않습니다. 결합을 해제하거나 요금제를
+              변경할 경우 변경 다음 달부터 발급이 재개됩니다. 또한 다이렉트 요금제 가입으로 인해 별도의 혜택을 받고 있을
+              경우 쇼핑쿠폰팩이 중복 지급되지 않습니다.
+            </li>
+          </ul>
+        </div>
+
+        <button class="titType v3" onclick="accordianClick(this)" aria-expanded="false" aria-controls="_accordion_009">
+          <span class="profile">
+            <span class="blind">여자</span>
+          </span>
+          <div class="titType-box">
+            <span class="question">
+              <span class="ico-question">질문</span>
+              요금 연체 혹은 해외 출국 등의 사유로<br />
+              일시정지가 되었는데, 정지 기간 동안 못 받은<br />
+              쿠폰은 받을 수 있나요?
+            </span>
+            <span class="arrow"></span>
+          </div>
+        </button>
+        <div id="_accordion_009" class="subDepth">
+          <p><span class="ico-answer">답변</span></p>
+          <ul>
+            <li>
+              요금 연체, 일시정지 등의 사유로 쿠폰이 미지급되었을 경우 최대 2개월까지만 소급됩니다.(당월분 포함 최대
+              3회분 지급)
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
   <div class="ui_modal_wrap event_modal event_modal_layer1">
     <div class="ui_modal_dim"></div>
     <div id="vedioPop" class="lay_wrap2 ui_modal_container" data-ui="Modal">
@@ -1556,15 +1621,23 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
-  (function (window) {
-    function initSwiper() {
-      if (typeof Swiper === "undefined") {
-        console.error("Swiper 라이브러리가 로드되지 않았습니다.");
-        return;
+  (function () {
+    // Swiper 스크립트가 로드되었는지 확인하고 로드되지 않았다면 동적으로 로드
+    function loadSwiper() {
+      if (typeof window.Swiper === "undefined") {
+        const script = document.createElement("script");
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js";
+        script.onload = initSwiper;
+        document.head.appendChild(script);
+      } else {
+        initSwiper();
       }
+    }
 
+    // Swiper 초기화 함수
+    function initSwiper() {
+      // 기존 인스턴스 제거
       if (window.evtDetailSwiperIns) {
         window.evtDetailSwiperIns.destroy();
         window.evtDetailSwiperIns = null;
@@ -1574,7 +1647,18 @@
         window.evtDetailSwiperIns2 = null;
       }
 
-      window.evtDetailSwiperIns = new Swiper(".swiper-e-multiple .swiper-container", {
+      // DOM 요소 존재 확인
+      const multipleContainer = document.querySelector(".swiper-e-multiple .swiper-container");
+      const normalContainer = document.querySelector(".swiper-e-normal .swiper-container");
+
+      if (!multipleContainer || !normalContainer) {
+        console.warn("Swiper containers not found, retrying in 100ms...");
+        setTimeout(initSwiper, 100);
+        return;
+      }
+
+      // 첫 번째 스와이퍼 초기화
+      window.evtDetailSwiperIns = new window.Swiper(".swiper-e-multiple .swiper-container", {
         loop: true,
         navigation: {
           nextEl: ".swiper-e-multiple .swiper-button-next",
@@ -1582,167 +1666,238 @@
         },
         centeredSlides: true,
         slidesPerView: 3,
-        loopAdditionalSlides: 1,
+        speed: 200,
+        shortSwipes: true,
+        followFinger: true,
+        watchSlidesProgress: true,
+        normalizeSlideIndex: true,
+        roundLengths: true,
+        observer: true,
+        observeParents: true,
+        loopedSlides: 7, // 전체 슬라이드 수만큼 설정
         on: {
-          init: (swiper) => {
+          init: function (swiper) {
+            if (!swiper.slides[swiper.activeIndex]) return;
+            const button = swiper.slides[swiper.activeIndex].querySelector("button");
+            if (button) button.setAttribute("title", "선택됨");
+
+            swiper.slides.forEach((slide) => {
+              const btn = slide.querySelector("button");
+              if (btn) btn.setAttribute("tabindex", "-1");
+              slide.setAttribute("aria-hidden", "true");
+            });
+
             if (swiper.slides[swiper.activeIndex]) {
-              swiper.slides[swiper.activeIndex].querySelector("button").setAttribute("title", "선택됨");
+              swiper.slides[swiper.activeIndex].setAttribute("tabindex", "-1");
+              const activeBtn = swiper.slides[swiper.activeIndex].querySelector("button");
+              if (activeBtn) activeBtn.setAttribute("tabindex", "0");
+              swiper.slides[swiper.activeIndex].setAttribute("aria-hidden", "false");
             }
           },
-          slideChange: (swiper) => {
-            var items = swiper.slides;
-            var currentItem = items[swiper.activeIndex];
-            items.forEach((e) => {
-              if (e.querySelector("button")) {
-                e.querySelector("button").removeAttribute("title");
+          slideChange: function (swiper) {
+            const items = swiper.slides;
+            const currentItem = items[swiper.activeIndex];
+
+            items.forEach((slide) => {
+              const button = slide.querySelector("button");
+              if (button) {
+                button.removeAttribute("title");
+                button.setAttribute("tabindex", "-1");
               }
+              slide.setAttribute("aria-hidden", "true");
             });
-            if (currentItem.querySelector("button")) {
-              currentItem.querySelector("button").setAttribute("title", "선택됨");
+
+            if (currentItem) {
+              const button = currentItem.querySelector("button");
+              if (button) {
+                button.setAttribute("title", "선택됨");
+                button.setAttribute("tabindex", "0");
+              }
+              currentItem.setAttribute("aria-hidden", "false");
             }
           },
         },
       });
 
-      window.evtDetailSwiperIns2 = new Swiper(".swiper-e-normal .swiper-container", {
+      // 두 번째 스와이퍼 초기화
+      window.evtDetailSwiperIns2 = new window.Swiper(".swiper-e-normal .swiper-container", {
         loop: true,
-        loopAdditionalSlides: 3,
+        loopedSlides: 7, // 전체 슬라이드 수만큼 설정
+        speed: 200,
+        observer: true,
+        observeParents: true,
+        on: {
+          init: function (swiper) {
+            if (swiper.slides[swiper.activeIndex]) {
+              swiper.slides[swiper.activeIndex].setAttribute("aria-hidden", false);
+            }
+          },
+          slideChange: function (swiper) {
+            swiper.slides.forEach((slide, idx) => {
+              slide.setAttribute("aria-hidden", idx === swiper.activeIndex ? false : true);
+            });
+          },
+        },
       });
 
-      window.evtDetailSwiperIns.controller.control = window.evtDetailSwiperIns2;
-      window.evtDetailSwiperIns2.controller.control = window.evtDetailSwiperIns;
-    }
-
-    function swiperActiveSlide(target) {
-      if (!window.evtDetailSwiperIns) {
-        console.error("Swiper가 아직 초기화되지 않았습니다.");
-        return;
+      // 컨트롤러 연결
+      if (window.evtDetailSwiperIns && window.evtDetailSwiperIns2) {
+        window.evtDetailSwiperIns.controller.control = window.evtDetailSwiperIns2;
+        window.evtDetailSwiperIns2.controller.control = window.evtDetailSwiperIns;
       }
-      var goSlide = Number(target.getAttribute("data-go")) + 3;
-      window.evtDetailSwiperIns.slideTo(goSlide);
-
-      setTimeout(() => {
-        var activeSlide = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
-        if (activeSlide && !activeSlide.getAttribute("tabindex")) {
-          activeSlide.setAttribute("tabindex", 0);
-          activeSlide.focus();
-        }
-      }, 500);
     }
 
-    function goSwiperActive(target) {
-      if (!window.evtDetailSwiperIns) {
-        console.error("Swiper가 아직 초기화되지 않았습니다.");
-        return;
+    // HTML이 모두 로드된 후 초기화 시작
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", loadSwiper);
+    } else {
+      loadSwiper();
+    }
+  })();
+
+  function swiperActiveSlide(target) {
+    const targetIndex = Number(target.getAttribute("data-go")) - 1;
+    const currentIndex = window.evtDetailSwiperIns.realIndex;
+
+    // 현재 위치에서 목표 위치까지의 최단 거리 계산
+    const totalSlides = 7; // 전체 슬라이드 수
+    let diff = targetIndex - currentIndex;
+
+    // 최단 경로 계산
+    if (Math.abs(diff) > totalSlides / 2) {
+      diff = diff > 0 ? diff - totalSlides : diff + totalSlides;
+    }
+
+    // 현재 인덱스에서 목표 인덱스로 이동
+    window.evtDetailSwiperIns.slideTo(window.evtDetailSwiperIns.activeIndex + diff, 600);
+
+    // 접근성 개선
+    setTimeout(() => {
+      var activeSlide = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
+      if (activeSlide) {
+        if (!activeSlide.getAttribute("tabindex")) {
+          activeSlide.setAttribute("tabindex", 0);
+        }
+        activeSlide.focus();
       }
-      var goSlide = Number(target.getAttribute("data-go")) + 3;
-      var targetOffsetTop =
-        window.pageYOffset + document.querySelector(".event_detail .sliderAreaWrap").getBoundingClientRect().top - 50;
-      window.evtDetailSwiperIns.slideTo(goSlide);
+    }, 650);
+  }
 
-      setTimeout(() => {
-        var activeSlide = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
-        if (activeSlide && !activeSlide.getAttribute("tabindex")) {
-          activeSlide.setAttribute("tabindex", 0);
-          activeSlide.focus();
-        }
-      }, 500);
+  function goSwiperActive(target) {
+    var goSlide = Number(target.getAttribute("data-go")) + 3;
+    var targetOffsetTop =
+      window.pageYOffset + document.querySelector(".event_detail .sliderAreaWrap").getBoundingClientRect().top - 50;
+    window.evtDetailSwiperIns.slideTo(goSlide);
+    //접근성 개선
+    var target = window.evtDetailSwiperIns.el.querySelector(".swiper-slide-active");
+    setTimeout(() => {
+      if (!target.getAttribute("tabindex")) {
+        target.setAttribute("tabindex", 0);
+      }
+      target.focus();
+    }, 500);
+    scrollTo(targetOffsetTop, 500);
+  }
 
-      scrollTo(targetOffsetTop, 500);
-    }
+  function scrollTo(to, duration) {
+    var element = document.scrollingElement || document.documentElement;
+    var start = element.scrollTop;
+    var change = to - start;
+    var startDate = +new Date();
+    // t = current time
+    // b = start value
+    // c = change in value
+    // d = duration
+    var easeInOutQuad = function (t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+    var animateScroll = function () {
+      var currentDate = +new Date();
+      var currentTime = currentDate - startDate;
+      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      // console.log(currentTime, duration)
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        element.scrollTop = to;
+      }
+    };
+    animateScroll();
+  }
 
-    function scrollTo(to, duration) {
-      var element = document.scrollingElement || document.documentElement;
-      var start = element.scrollTop;
-      var change = to - start;
-      var startDate = +new Date();
+  function openLayerEvent(target) {
+    var targetLayer = ".event_modal." + target.getAttribute("data-layer");
+    var elemLayer = document.querySelector(targetLayer);
+    var on = "on";
+    elemLayer.classList.add(on);
+    elemLayer.setAttribute("tabindex", 0);
+    elemLayer.focus();
+  }
 
-      var easeInOutQuad = function (t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-      };
+  function closeLayerEvent(target) {
+    var elemLayer = target.closest(".event_modal");
+    var reverse = "." + target.getAttribute("data-reverse");
+    var reverseBt = document.querySelector(reverse);
+    var on = "on";
+    elemLayer.classList.remove(on);
+    elemLayer.removeAttribute("tabindex");
+    reverseBt.focus();
+  }
 
-      var animateScroll = function () {
-        var currentDate = +new Date();
-        var currentTime = currentDate - startDate;
-        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
-        if (currentTime < duration) {
-          requestAnimationFrame(animateScroll);
-        } else {
-          element.scrollTop = to;
-        }
-      };
-      animateScroll();
-    }
+  function tabsClick(target) {
+    var parent = target.closest(".tabs_conts_wrap");
+    var tabsBtns = parent.querySelectorAll(".tabs_btns");
+    var tabsConts = parent.querySelectorAll(".tabs_conts");
+    var on = "on";
+    var content = target.closest(".tabs_btns").nextElementSibling;
+    var targetIdx = target.closest(".tabs_btns").getAttribute("data-idx") - 1;
 
-    function openLayerEvent(target) {
-      var targetLayer = ".event_modal." + target.getAttribute("data-layer");
-      var elemLayer = document.querySelector(targetLayer);
-      elemLayer.classList.add("on");
-      elemLayer.setAttribute("tabindex", 0);
-      elemLayer.focus();
-    }
+    tabsBtns.forEach(function (tabsBtn, idx) {
+      if (targetIdx === idx) {
+        target.closest(".tabs_btns").classList.add(on);
+        target.setAttribute("aria-selected", true);
+        target.setAttribute("title", "선택됨");
+      } else {
+        tabsBtn.classList.remove(on);
+        tabsBtn.querySelector("button").setAttribute("aria-selected", false);
+        tabsBtn.querySelector("button").removeAttribute("title");
+      }
+    });
+    tabsConts.forEach(function (tabsCont, idx) {
+      if (targetIdx === idx) {
+        tabsCont.style.display = "block";
+      } else {
+        tabsCont.style.display = "none";
+      }
+    });
+  }
 
-    function closeLayerEvent(target) {
-      var elemLayer = target.closest(".event_modal");
-      var reverse = "." + target.getAttribute("data-reverse");
-      var reverseBt = document.querySelector(reverse);
-      elemLayer.classList.remove("on");
-      elemLayer.removeAttribute("tabindex");
-      reverseBt.focus();
-    }
-
-    function tabsClick(target) {
-      var parent = target.closest(".tabs_conts_wrap");
-      var tabsBtns = parent.querySelectorAll(".tabs_btns");
-      var tabsConts = parent.querySelectorAll(".tabs_conts");
-      var targetIdx = target.getAttribute("data-idx") - 1;
-
-      tabsBtns.forEach((tabsBtn, idx) => {
-        tabsBtn.classList.toggle("on", idx === targetIdx);
-        tabsBtn.setAttribute("aria-selected", idx === targetIdx);
-      });
-
-      tabsConts.forEach((tabsCont, idx) => {
-        tabsCont.style.display = idx === targetIdx ? "block" : "none";
-      });
-    }
-
-    function accordianClick(target) {
-      var parent = target.closest(".accordions_conts_wrap");
-      var titTypes = parent.querySelectorAll(".titType");
-      var subDepths = parent.querySelectorAll(".subDepth");
-      var content = target.nextElementSibling;
-      var on = "ui-state-active";
-
-      titTypes.forEach((titType) => {
+  function accordianClick(target) {
+    var parent = target.closest(".accordions_conts_wrap");
+    var titTypes = parent.querySelectorAll(".titType");
+    var subDepths = parent.querySelectorAll(".subDepth");
+    var content = target.nextElementSibling;
+    var on = "ui-state-active";
+    var re = new RegExp(" " + on);
+    var checkActive = re.test(target.className);
+    if (checkActive) {
+      target.classList.remove(on);
+      target.setAttribute("aria-expanded", false);
+      content.style.display = "none";
+    } else {
+      titTypes.forEach(function (titType) {
         titType.classList.remove(on);
         titType.setAttribute("aria-expanded", false);
       });
-
-      subDepths.forEach((subDepth) => {
+      subDepths.forEach(function (subDepth) {
         subDepth.style.display = "none";
       });
-
       target.classList.add(on);
       target.setAttribute("aria-expanded", true);
       content.style.display = "block";
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(() => {
-        initSwiper();
-      }, 100); // 약간의 딜레이 추가
-    });
-
-    window.swiperActiveSlide = swiperActiveSlide;
-    window.goSwiperActive = goSwiperActive;
-    window.scrollTo = scrollTo;
-    window.openLayerEvent = openLayerEvent;
-    window.closeLayerEvent = closeLayerEvent;
-    window.tabsClick = tabsClick;
-    window.accordianClick = accordianClick;
-  })(window);
+  }
 </script>
