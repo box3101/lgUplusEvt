@@ -1,0 +1,125 @@
+<!-- mw -->
+<style type="text/css">
+  .new_evt_wrap {
+    position: relative;
+  }
+
+  .new_evt_wrap .event_detail {
+    position: relative;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn {
+    display: block;
+    position: absolute;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_join {
+    left: 27.6%;
+    width: 45.5%;
+    height: 13vw;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_get_full {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 9.8vw;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_get_round {
+    width: 27%;
+    height: 7vw;
+    border-radius: 3.5vw;
+  }
+
+  /* 유의사항 */
+  .footerWrap {
+    background: #2f2f2f;
+    padding: 40px 24px;
+  }
+
+  .footerWrap h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 2px solid #fefefe;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .footerWrap ul li {
+    padding-left: 7px;
+    position: relative;
+    font-size: 13px;
+    color: #b3b3b3;
+    line-height: 1.5em;
+    word-break: keep-all;
+  }
+
+  .footerWrap ul li + li {
+    margin-top: 6px;
+  }
+
+  .footerWrap ul li:before {
+    content: "-";
+    position: absolute;
+    left: 0;
+  }
+</style>
+
+<div class="new_evt_wrap">
+  <div class="event_detail">
+    <img
+      alt="하단 내용 참조"
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-041902-380-iIXgJLev.png"
+    />
+    <div class="blind">
+      <h2>유플러스닷컴 2025 NEW 키즈폰 광고</h2>
+      <p>
+        AI로 더 똑똑해진 안심케어 U+키즈폰 무니 에디션 경품 주소 입력 페이지.
+        출시 이벤트에 참여하세요. '무니 스페셜 기프트 박스' 받으실 배송 주소를
+        입력해주세요.
+      </p>
+      <h3>참여 대상</h3>
+      <p>
+        이벤트 기간 내 유플러스닷컴에서 U+키즈폰 무니 에디션 구매 고객 중 주소
+        입력 분자 안내 받으신 고객님.
+      </p>
+      <h3>참여 방법</h3>
+      <p>
+        하단의 '경품 배송 주소 입력하기' 버튼을 눌러 개인 정보 입력 및 제출.
+      </p>
+      <h3>유의사항</h3>
+      <ul>
+        <li>
+          입력한 개인 정보는 U+키즈폰 무니 에디션 구매자 정보와 동일 해야 함
+        </li>
+        <li>
+          등록 요청 기간까지 배송정보를 입력하지 않을 경우, 제품 발송이
+          불가하오니 기간 내 꼭등록해주세요.
+        </li>
+        <li>
+          잘못된 정보 (개롱정보 - 전화번호, 이름, 배송정보)로 인한 경품 미
+          수령에 대한 책임은 당첨자 본인에게 있으며, 재발송 되지 않습니다
+        </li>
+      </ul>
+    </div>
+    <button
+      type="button"
+      onclick="externalServices.dispatchMessageEvent('EventCustomerDb',{action:'clickEvetPtpn',params:{}})"
+      class="event_detail_btn btn_join"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="경품 배송 주소 입력하기"
+      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 경품 배송 주소 입력하기"
+      data-gtm-event-name="button_click"
+      data-route=""
+      style="bottom: 9vw; left: 23%; width: 54vw; height: 12vw"
+    >
+      <span class="blind">경품 배송 주소 입력하기</span>
+    </button>
+  </div>
+</div>

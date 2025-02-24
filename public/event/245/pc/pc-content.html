@@ -1,0 +1,717 @@
+<!--  라이프케어 인터넷/IPTV PC  -->
+<style type="text/css">
+  .top_header_view {
+    width: 100%;
+    height: 68px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    /* border-bottom: 1px solid #e5e5e5; */
+    z-index: 1;
+  }
+  .top_header_view::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+  }
+
+  .top_header_view .inner {
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .top_bnr_view {
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    background: #eee;
+    border-bottom: 4px solid #e6007e;
+    padding-top: 7px;
+    z-index: 1;
+  }
+  .top_bnr_view a {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    background: rgba(0, 0, 0, 0);
+  }
+  .top_bnr_view .inner {
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .top_bnr_view .section {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  .top_bnr_view + .section {
+    margin-top: 178px;
+  }
+
+  .pc_view_ctns {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  .mobile_view_ctns {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mobile_view_ctns img {
+    width: 100%;
+  }
+  .section {
+    position: relative;
+  }
+  .section img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+  }
+  .section .event_detail_a {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  /* 하단 고정 바 */
+  .float_area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0 31px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(27, 27, 27, 0.8);
+    z-index: 30;
+    color: #fff;
+    overflow: hidden;
+  }
+  .float_area .inner_wrap {
+    width: 1080px;
+    margin: 0 auto;
+    padding: 0 30px;
+    overflow: hidden;
+  }
+  .float_area.on {
+    position: absolute;
+    bottom: 222px;
+    left: 0;
+  }
+  .float_area .call_wrap {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .float_area .call_wrap span {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .float_area .txt_wrap {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .float_area .txt_wrap .tit {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .float_area .txt_wrap .tit_desc {
+    font-size: 15px;
+    color: #b3b2b2;
+    margin-top: 10px;
+  }
+  .float_area .txt_wrap .tit_desc span {
+    color: #888;
+  }
+  .float_area .float_btn_wrap {
+    vertical-align: middle;
+    float: right;
+    line-height: 23px;
+  }
+  .float_area .float_btn_wrap a {
+    display: inline-block;
+    padding: 16px 30px;
+    color: #fff;
+    background: #ef1194;
+    border-radius: 50px;
+  }
+  .float_area .float_btn_wrap a + a {
+    margin-left: 8px;
+  }
+  .float_area .float_btn_wrap a span {
+    display: inline-block;
+    padding-left: 35px;
+    font-size: 18px;
+  }
+  .float_area .float_btn_wrap a.flt_btn_chat span {
+    background: url(/common/images/hsvc/comm/ico_link_chat_pc.png) no-repeat left center;
+    background-size: 27px;
+  }
+  .float_area .float_btn_wrap a.flt_btn_cnl span {
+    background: url(/common/images/hsvc/comm/ico_link_cnl_pc.png) no-repeat left center;
+    background-size: 27px;
+  }
+
+  .float_area .float_btn_wrap button {
+    display: inline-block;
+    padding: 16px 30px;
+    color: #fff;
+    background: #ef1194;
+    border-radius: 50px;
+  }
+  .float_area .float_btn_wrap button + button {
+    margin-left: 8px;
+  }
+  .float_area .float_btn_wrap button span {
+    display: inline-block;
+    padding-left: 35px;
+    font-size: 18px;
+  }
+  .float_area .float_btn_wrap button.flt_btn_chat span {
+    background: url(/common/images/hsvc/comm/ico_link_chat_pc.png) no-repeat left center;
+    background-size: 27px;
+  }
+  .float_area .float_btn_wrap button.flt_btn_cnl span {
+    background: url(/common/images/hsvc/comm/ico_link_cnl_pc.png) no-repeat left center;
+    background-size: 27px;
+  }
+
+  /* 원스톱 버튼 */
+  .onestop .acco_btnwrap {
+    background-color: #fff;
+    text-align: center;
+  }
+  .acco_btnwrap .acco_qustion_btn {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241119-025605-239-JrThfDOy.png")
+      no-repeat 50% 0;
+    width: 100%;
+    height: 82px;
+    font-size: 0;
+    background-size: contain;
+    margin: 60px 0;
+  }
+  .acco_btnwrap .on {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241119-024606-719-8HQ2KVEf.png")
+      no-repeat 50% 0;
+    width: 100%;
+    height: 82px;
+    background-size: contain;
+  }
+
+  /* footer */
+  .footer_wrap {
+    color: #fafafa;
+    background: #373737;
+    padding: 50px 40px 45px;
+  }
+  .footer_wrap .footer_section + .footer_section {
+    margin-top: 38px;
+  }
+  .footer_wrap h2 {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid #fafafa;
+    padding-bottom: 2px;
+    color: #fafafa;
+  }
+  .footer_wrap h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 23px;
+    color: #fafafa;
+  }
+  .footer_wrap ul {
+    margin-top: 17px;
+    color: #cacaca;
+  }
+  .footer_wrap ul li {
+    position: relative;
+    padding-left: 12px;
+    font-size: 16px;
+  }
+  .footer_wrap ul li + li {
+    margin-top: 13px;
+  }
+  .footer_wrap ul li:before {
+    content: "-";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #fafafa;
+  }
+  .footer_wrap .footer_link {
+    display: inline-block;
+    line-height: 22px;
+    padding: 0 20px 0 10px;
+    font-size: 14px;
+    color: #fff;
+    background: #787878;
+    vertical-align: middle;
+    border-radius: 50px;
+    margin-left: 8px;
+    position: relative;
+  }
+  .footer_wrap .footer_link span:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 7px;
+    height: 10px;
+    background: url("https://www.lguplus.com/common/images/hsvc/hsvc_event/kids/kids_link_arrow.png") no-repeat 0 0;
+    background-size: 7px;
+  }
+</style>
+<div class="pc_view_ctns">
+  <div class="top_header_view">
+    <div class="inner">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220919-105033-653-0OtvfIzb.jpg"
+        alt="LG U+ 유플러스닷컴X라이프케어"
+      />
+    </div>
+  </div>
+  <!-- <div class="top_bnr_view">
+    <div class="inner">
+      <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220916-012904-200-gft8uMBe.jpg" alt="Tab버튼, 하단 내용 참조" />
+      <a class="event_detail_a" href="/benefit-event/lifecare/mobile" style="top: 0;left: 0;width: 50%;height: 61px;"><span>휴대폰 구매</span></a>
+      <a class="event_detail_a" href="javascript:void(0)" style="top: 0;left: 50%;width: 50%;height: 61px;" title="선택됨"><span>인터넷/IPTV 가입</span></a>
+    </div>
+  </div> -->
+  <!-- KV -->
+  <div class="section" style="margin-top: 58px">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250121-034136-640-ImW4z1pU.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <p>인터넷/IPTV 가입 이벤트</p>
+      <p>가족, 친구와 함께하는 따뜻한 겨울혜택</p>
+      <p>15만 포인트 최대 367만원</p>
+    </div>
+    <a
+      data-route
+      class="event_detail_a"
+      href="javascript:void(0)"
+      onclick="javascript:callOnsalePop('Home_Lifecare_PC','P'); return false;"
+      style="width: 52%; height: 102px; bottom: 7.5%; left: 23%"
+    >
+      <span>상담 신청 및 추천하기</span>
+    </a>
+  </div>
+  <!-- 귀멸의 칼날 삭제 24.06.28-->
+  <!-- 인터넷/IPTV 신규 가입 -->
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250121-034145-642-PvgDM4hQ.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <h2>인터넷/IPTV 신규 가입하고 최대 367만원의 혜택을 받아보세요!</h2>
+      <ul>
+        <li>임직원 특별 포인트 15만 포인트</li>
+        <li>상품권/사은품 46만원</li>
+        <li>닷컴 단독할인 11만원</li>
+        <li>TV 결합 할인 39만원</li>
+        <li>휴대폰 결합 할인 112만원</li>
+        <li>U+모바일tv 월정액 20만원</li>
+        <li>웰컴쿠폰 8만원</li>
+        <li>무료 제공 기기 18만원</li>
+        <li>VOD 멤버십 할인 8만원</li>
+        <li>U+ 제휴카드 할인 90만원</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 혜택1~10 -->
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250123-014600-103-6PDSVCn8.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 1</strong>
+      <h2>임직원 특별 15만 포인트 제공<br />LGU+ 15만 복지포인트</h2>
+      <ul>
+        <li>01. 임직원 본인이 인터넷/IPTV 가입하면 15만 복지 포인트 제공 OR</li>
+        <li>02. 다른 임직원 또는 가족/지인 추천하여 가입 시 임직원에게 건당 15만 복지 포인트 제공</li>
+      </ul>
+      <dl>
+        <dt><em>무제한 혜택</em> 받을 수 있는 참 쉬운 <em>추천 방법!</em></dt>
+        <dd>
+          <ol>
+            <li>1. 상담신청 버튼을 눌러주세요. ('임직원 가입상담 신청' 버튼 클릭 하는 이미지)</li>
+            <li>2. 추천하실 분의 성함, 연락처를 입력하세요.</li>
+            <li>3. 가입완료 후 복지포인트가 지급됩니다! (150,000P 복지포인트 지급 이미지)</li>
+          </ol>
+        </dd>
+      </dl>
+      <p>유의사항</p>
+      <ul>
+        <li>
+          인터넷 가입하실 분(회원 본인 또는 지인)의 성함과 연락처를 입력해 주세요 (인터넷 가입/개통자의 정보와 다르게
+          기입한 경우 복지 포인트가 지급되지 않을 수 있습니다.)
+        </li>
+        <li>
+          인터넷+IPTV 동시 가입 시 인터넷 1G / 500M 가입은 15만 포인트, 100M 가입은 10만 포인트로 차등 지급됩니다.
+        </li>
+        <li>
+          인터넷 단독 가입 시 인터넷 1G / 500M 가입은 10만 포인트, 100M 가입은 5만 포인트로 차등 지급됩니다. (2025년 1월
+          가입부터 해당)
+        </li>
+        <li>
+          복지포인트는 본인 또는 지인을 추천한 회원에게 지급되며 1회선당 1회의 포인트만 지급됩니다. (회원1이 회원2를
+          추천한 경우 회원1에게 포인트 지급)
+        </li>
+        <li>포인트는 개통완료 후 다음 달에 지급됩니다.</li>
+        <li>복지 포인트 사용기간 : 지급일로부터 1년 (ex. 2025년 1월 1일 지급 시 2025년 12월 31일까지 사용 가능)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092845-775-vN7ism33.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 2</strong>
+      <h2>최대 46만원 상품권 또는 50인치 TV를 무료로!</h2>
+      <p>인기사은품무료제공 ※ 인터넷 1기가+IPTV 결합 상품 기준</p>
+      <ul>
+        <li>상품권 (신세계/롯데/스마일/홈플러스)</li>
+        <li>50인치 UHD TV (KU50UC7050FXKR)</li>
+        <li>LG 룸앤 TV (27TQ600SW)</li>
+        <li>LG 오브제컬렉션 A9 무선청소기 (AS9202WD)</li>
+        <li>LG 오브제컬렉션 공기청정기 (AS064PWBAR)</li>
+        <li>LG 오브제컬렉션 와인셀러 (W0082GCB)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092901-514-JE0cD6JQ.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 3</strong>
+      <h2>최대 11만원 추가 요금 할인</h2>
+      <p>온라인 단독 할인</p>
+      <p>매월 청구 요금에서 추가 할인 ※3년 약정, 인터넷(프리미엄 안심 1기가) + IPTV(프라임 라이트) 기준</p>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092909-208-xPc5pOVb.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 4</strong>
+      <h2>인터넷+IPTV 결합 시 최대 39만원 요금 할인</h2>
+      <p>인터넷+IPTV ※3년 약정, 인터넷 1기가+IPTV 프리미엄 VOD 기준</p>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092915-696-2AyC6Gtj.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 5</strong>
+      <h2>휴대폰 결합시 최대 112만원 요금 할인 (월 31,000원 할인*36개월)</h2>
+      <p>인터넷 500M이상 11,000원 할인</p>
+      <p>2인 10,000원 할인</p>
+      <p>3인 14,000원 할인</p>
+      <p>4인 20,000원 할인</p>
+      <p>※ U+ 투게더 결합 시 적용되는 추가 할인</p>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092921-957-PgIl00y7.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 6</strong>
+      <h2>U+모바일tv 기본 월정액 무료 제공 (월 5,500원 할인*36개월)</h2>
+      <p>
+        U+모바일tv ※ 휴대폰에서 U+모바일tv 앱을 통해 실시간 채널, TV다시보기, 무료영화, 애니메이션 등을 시청할 수
+        있습니다.
+      </p>
+
+      <strong>혜택 7</strong>
+      <h2>웰컴쿠폰 증정</h2>
+      <p>월정액 첫달 무료 6종 + vod 5,000원 할인</p>
+      <p>
+        ※ 무료 6종 : U+영화월정액 프리미엄, CJ 월정액, 애니프리미엄 월정액, 스포티비 프라임 패키지, 캐치온 VOD, 투니버스
+        월정액
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092927-155-SfWyKB9l.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 8</strong>
+      <h2>제공기기 무료 제공 월 4,950원 X 36개월</h2>
+      <p>
+        내 라이프 스타일에 맞춰 원하는 기기 추가 제공 ※ 프리미엄 안심 500M 이상 : 기기와이파이6 + 추가 기기
+        택1(기가와이파이6 or 스마트홈 스피커)
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092933-137-6wExUrIT.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <strong>혜택 9</strong>
+      <h2>U+ tv 콘텐츠 할인 (월 5,500원 할인 * 36개월)</h2>
+      <p>20% U+멤버십 VOD 할인</p>
+      <p>
+        유료 VOD 콘텐츠 20% 할인 ※ 최신 VOD (11,000원) 월 1회 구매 기준, 기존 월정액/유료채널 상품은 할인 적용 불가 ※
+        사용방법 : U+ tv 콘텐츠 선택 > 구매하기 > U+멤버십 할인 적용
+      </p>
+
+      <strong>혜택 10</strong>
+      <h2>LG U+ 제휴카드 할인</h2>
+      <p>최대 월 25,000원 요금 할인 X 36개월</p>
+      <p>U+ Family 하나카드 ※ 전월 이용금액 70만원 이상 기준, 월별 프로모션에 따라 상이</p>
+    </div>
+  </div>
+  <!-- //혜택1~10 -->
+
+  <!-- 환승구독 삭제 24.06.28-->
+  <!-- 인터넷+IPTV 결합 요금제 -->
+  <div class="section">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-092939-941-tQH6Ugpl.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <h2>유플러스닷컴에서만 할인 받을 수 있는 인터넷+IPTV 결합 요금제 추천드려요.</h2>
+      <ul>
+        <li>인터넷 100M + IPTV 베이직 = 월 이용요금 39,600원이 할인 받으면 월 34,130원</li>
+        <li>인터넷 500M + IPTV 프리미엄 = 월 이용요금 56,100원이 할인 받으면 월 40,150원</li>
+        <li>인터넷 1G + IPTV 프리미엄 VOD = 월 이용요금 67,100원이 할인 받으면 월 44,000원</li>
+      </ul>
+      <ul>
+        <li>휴대폰 결합 시 적용되는 월 이용요금입니다.</li>
+        <li>기가와이파이6 기본 제공 포함된 금액입니다.</li>
+        <li>참 쉬운 가족결합 조건입니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 원스톱 -->
+  <div>
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-094111-169-wx9L2Avj.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <p>인터넷/유료방송 가입과 해지를 한번에!</p>
+      <h2>결합상품 원스톱 전환서비스</h2>
+      <p>이제 이동할 사업자에게 가입 신청하실 때 기존 서비스의 해지도 한번에 처리하실 수 있습니다.(2020년 7월 시행)</p>
+    </div>
+  </div>
+  <div class="section onestop">
+    <div class="acco_btnwrap">
+      <button
+        class="acco_qustion_btn"
+        aria-expanded="false"
+        aria-controls="_accordion3_001"
+        onclick="togglesClick(this);"
+      >
+        자세히 보기
+      </button>
+      <div id="_accordion3_001" class="acco_qustion" style="display: none">
+        <img
+          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-094116-199-WOe0W8KF.png"
+          alt="하단 내용 참조"
+        />
+        <div class="blind">
+          <dl>
+            <dt>1. 원스톱 전환 서비스가 무엇인가요?</dt>
+            <dd>신규 통신사 가입 시 기존 통신사 서비스 해지를 한번에 처리할 수 있는 간편한 제도입니다.</dd>
+          </dl>
+          <ul>
+            <li>신청 가능 통신사 : LG U+, KT, SK브로드밴드, SKT, KTSkyLife</li>
+            <li>신청 가능 서비스 : 초고속 인터넷, 초고속 인터넷과 유료방송(IPTV, 위성방송)결합 서비스</li>
+          </ul>
+          <dl>
+            <dt>2. 어떻게 이용하나요?</dt>
+            <dd>
+              1. 신규 가입 및 사업자 전환 신청서 2. 기존 통신사 해지확인전화 수신 할인반환금, 결합변동 등 중요사항 안내
+              3. 신규 서비스 개통 기존 서비스 해지 한 곳에서 한 번에 처리
+            </dd>
+          </dl>
+          <p>신청 가능 창구 : 고객센터, 홈페이지 및 대리점, 판매점 등 온/오프라인 매장</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //원스톱 -->
+
+  <!-- footer -->
+  <div class="section -pb-150">
+    <div class="footer_wrap">
+      <h2>꼭 알아두세요!</h2>
+      <div class="footer_section">
+        <h3>인터넷/IPTV 가입 시 유의사항</h3>
+        <ul>
+          <li>할인기준: 3년 약정으로 신규 가입하는 경우 위 모든 할인을 제공합니다.</li>
+          <li>
+            다이렉트 요금제(1년 약정 인터넷), 가정 인터넷 외(소상공인 등) 가입 시 복지 포인트를 지급하지 않습니다.
+          </li>
+          <li>셋톱박스 임대료는 UHD 셋톱박스 기준 금액입니다.</li>
+          <li>
+            제휴카드 할인은 'U<sup>+</sup>Family 하나카드'로 통신료 자동이체 신청 후 전월 이용실적이 70만원 이상인 경우
+            월 25,000원 할인 적용됩니다.
+            <a
+              data-route
+              class="footer_link"
+              href="https://www.lguplus.com/benefit-affiliate/card-discount"
+              target="_blank"
+              title="새 창 열림"
+            >
+              <span>자세히 보기</span>
+            </a>
+          </li>
+          <li>
+            휴대폰 결합 할인은 '참 쉬운 가족 결합 할인'으로 프리미엄 안심 1기가 기준 휴대폰 1회선 이상 결합 시 월
+            13,200원 할인 적용됩니다.
+            <a
+              data-route
+              class="footer_link"
+              href="https://www.lguplus.com/benefit-uplus/combined-discount/B200000016"
+              target="_blank"
+              title="새 창 열림"
+            >
+              <span>자세히 보기</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_section">
+        <h3>사은품 관련 유의사항</h3>
+        <ul>
+          <li>
+            3년 약정으로 U<sup>+</sup>인터넷(프리미엄 안심 1기가) + U<sup>+</sup>tv(프리미엄 VOD 이상) 동시 신규 가입
+            고객 대상 혜택입니다.
+          </li>
+          <li>일부 사은품과 모델명은 변경될 수 있습니다.</li>
+          <li>사은품 수량이 부족한 경우 다른 상품으로 변경될 수 있으며, 상품을 받으신 후에는 교환할 수 없습니다.</li>
+          <li>
+            개통 완료 후 실시간 기간 1년 이내에 해지 혹은 요금제 변경 시 받은 사은품에 대한 해지반환금이 발생합니다.<br />
+            (요금제 변경 시 발생되는 반환금은 더 저렴한 요금제로의 변경에 한하며, 기존/변경 요금제에 따라 발생되는
+            반환금액은 상이합니다.)
+          </li>
+          <li>사은품은 가입 당시 작성한 주소로 2주 이내에 배송해 드립니다.</li>
+          <li>사은품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후 모든 정보는 폐기됩니다.</li>
+          <li>모바일 상품권의 금액은 가입한 서비스의 종류와 약정기간에 따라 다릅니다.</li>
+          <li>모든 금액은 부가세 포함 금액입니다.</li>
+          <li>
+            자세한 내용은 유플러스닷컴 고객센터(1644-7070)로 문의 바랍니다. (평일 9시~18시 30분, 토요일 9시~12시 /
+            상담예약은 24시까지 가능)
+          </li>
+        </ul>
+      </div>
+      <!-- 이벤트 유의사항 삭제 24.06.28-->
+    </div>
+  </div>
+  <!-- //footer -->
+
+  <!-- 하단 고정 바 PC -->
+  <div class="float_area">
+    <div class="inner_wrap">
+      <div class="txt_wrap">
+        <p class="tit">임직원가입 전문 상담사가 고객님의 상품 가입을 빠르게 도와 드립니다.</p>
+        <p class="tit_desc">평일 09시~18시 30분, 토요일 09시~12시</p>
+      </div>
+
+      <div class="float_btn_wrap">
+        <a
+          class="flt_btn_cnl"
+          onclick="javascript:callOnsalePop('Home_Lifecare_PC','P'); return false;"
+          href="javascript:void(0);"
+        >
+          <span>가입상담 신청</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  (function (window) {
+    // function popOpenBtn() {
+    //   document.querySelector('#popWrap').style.display = 'block'
+    // }
+    // function popCloseBtn() {
+    //   document.querySelector('#popWrap').style.display = 'none'
+    // }
+
+    //원스톱 toggle추가
+    function togglesClick(target) {
+      var content = target.nextElementSibling;
+      var on = "on";
+      var re = new RegExp(" " + on);
+      var checkActive = re.test(target.className);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        target.setAttribute("aria-expanded", false);
+        content.style.display = "none";
+      } else {
+        target.classList.add(on);
+        target.setAttribute("aria-expanded", true);
+        content.style.display = "block";
+      }
+    }
+    //원스톱 toggle추가
+
+    function callOnsalePop(eventName, deviceType) {
+      // 2024 Next.js 전환
+      /*신청서 필수 파라미터 설정*/
+      const sendData = {
+        appfKdDivsCd: "2", //신청서유형구분코드 2: O/B 전화상담
+        onlnCnslJobDivsCd: "3", //온라인상담업무구분코드 3:홈 상담
+        appfLednChnlDivsCd: "04", //신청서인입채널구분코드 04: 임직원
+        appfLednDivsCd: "02", //신청서인입구분코드 02:인티스마트홈 12:신규 11:기존가입자 13:재약정
+        appfProdSvcDivsCd: "00", //신청서상품서비스구분코드
+        custDivsCd: "I", //고객구분코드 I:개인
+        operationId: "3828123", //오퍼레이션아이디
+        calEvetNm: eventName, //이벤트id
+      };
+
+      /*호출 정보 설정*/
+      const sendInfo = {
+        name: "callOnsalePop", //호출 function name
+        type: "HI", //호출구분 (IN:인터넷,TV:IPTV, HI:스마트홈),INTV:인터넷IPTV..
+        device: deviceType, //P[PC], M[MO]
+      };
+      const sendKey = "EMPLOYEE"; //임직원용 프로그램 호출 key 값
+
+      externalServices.dispatchMessageEvent(sendKey, { info: sendInfo, data: sendData });
+    }
+
+    // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
+    window.togglesClick = togglesClick;
+    window.callOnsalePop = callOnsalePop;
+  })(window);
+</script>
+<!-- pc -->
