@@ -1,0 +1,752 @@
+<!-- mw -->
+<style type="text/css">
+  .new_evt_wrap {
+    position: relative;
+  }
+
+  .new_evt_wrap .event_detail {
+    position: relative;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_a,
+  .new_evt_wrap .event_detail .event_detail_btn {
+    display: block;
+    position: absolute;
+    text-indent: -999999px;
+    overflow: hidden;
+    width: 55%;
+    height: 5%;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_join {
+    left: 27.6%;
+    width: 45.5%;
+    height: 13vw;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_get_full {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 9.8vw;
+  }
+
+  .new_evt_wrap .event_detail .event_detail_btn.btn_get_round {
+    width: 27%;
+    height: 7vw;
+    border-radius: 3.5vw;
+  }
+
+  /* 유의사항 */
+  /* 유의사항 */
+  .footerWrap {
+    background: #434446;
+    padding: 39px 16px;
+  }
+
+  .footerWrap h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    padding: 0 10px 10px;
+  }
+
+  .footerWrap .depth_anchor {
+    font-size: 13px;
+    color: #637cda;
+    display: inline-block;
+    margin: 3px 0 5px;
+    border-bottom: 1px solid #637cda;
+  }
+
+  .acType .ui-accordion {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .acType .titType {
+    position: relative;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    color: #dedede;
+    padding: 16px 0 16px 10px;
+    border-bottom: 1px solid #8e8583;
+    box-sizing: border-box;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .acType .titType:first-child {
+    border-top: 1px solid #5d6164;
+  }
+
+  .acType .titType:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png)
+      no-repeat 50% 50%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType span {
+    text-indent: -10px;
+    padding-left: 10px;
+  }
+
+  .acType .titType.active:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031403-132-d9oOmJNi.png)
+      no-repeat 50% 50%;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType.mul {
+    line-height: 1.3em;
+  }
+
+  .acType .titType.mul:before,
+  .acType .titType.active.mul:before {
+    top: 25px;
+  }
+
+  .acType .titType.active {
+    border-bottom: none;
+    color: #fff;
+  }
+
+  .acType .subDepth {
+    display: none;
+    padding: 20px 10px 20px 28px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fafafa;
+    border-bottom: 1px solid #756966;
+    box-sizing: border-box;
+  }
+
+  .acType .subDepth ul {
+    font-size: 13px;
+  }
+
+  .acType .subDepth ul > li {
+    position: relative;
+    margin-left: -10px;
+    word-break: break-all;
+  }
+
+  .acType .subDepth ul > li + li {
+    margin-top: 6px;
+  }
+
+  .acType .subDepth ul > li:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    top: 9px;
+    left: -7px;
+    background-color: #fafafa;
+  }
+</style>
+
+<div class="new_evt_wrap">
+  <!-- Section Name -->
+  <div class="event_detail">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250221-055501-092-UtEpvRvM.png"
+      alt="하단참고"
+    />
+    <div class="blind">
+      <h1>유플러스닷컴</h1>
+      <h2>다이렉트 신혼 요금제 출시 기념</h2>
+      <h3>♥유플닷컴과 함께하는 결혼 프로젝트♥</h3>
+
+      <div class="proposal">
+        <p>영은아~</p>
+        <p>결혼하자</p>
+      </div>
+
+      <div class="store-info">
+        <h4>U+공식온라인스토어</h4>
+        <p>사랑하는 고객님의 새로운 출발을 함께 합니다.</p>
+      </div>
+
+      <div class="event-details">
+        <p>♥기간 3월 4일(화) ~ 4월 18일(금)</p>
+        <p>♥ 대상 다이렉트 신혼 요금제로 인터넷 신규 가입한 고객 누구나</p>
+        <button class="consult-btn">가입 상담 신청 ></button>
+      </div>
+
+      <div class="benefits">
+        <section>
+          <h4>첫번째 행운</h4>
+          <p>행운을 내손안에</p>
+          <p>추첨을 통해 선물을</p>
+        </section>
+
+        <section>
+          <h4>두번째 선물</h4>
+          <p>가입하면 무조건</p>
+          <p>최고의 혜택팩</p>
+        </section>
+
+        <section>
+          <h4>세번째 이야기</h4>
+          <p>내 사연을 남겨볼까</p>
+          <p>결혼이야기</p>
+        </section>
+      </div>
+    </div>
+    <button
+      data-route=""
+      class="event_detail_a"
+      onclick="telCnslPop();"
+      data-gtm-event-name="link_click"
+      data-gtm-event-category="클릭"
+      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+      data-gtm-event-label="컨텐츠 : 가입 상담 신청"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-direction="내부"
+      data-gtm-click-text="가입 상담 신청"
+      style="bottom: 40%; left: 23%"
+    >
+      <span>가입 상담 신청</span>
+    </button>
+
+    <a
+      href="#"
+      class="event_detail_a btn_get_round a-self"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="첫번째 행운"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 첫번째 행운"
+      data-gtm-event-name="link_click"
+      style="bottom: 24%; left: 6%; width: 87%; height: 9.5%"
+      onclick="event.preventDefault(); document.querySelector('#first-section').scrollIntoView({behavior: 'smooth'})"
+      >첫번째 행운</a
+    >
+    <a
+      href="#"
+      class="event_detail_a btn_get_round a-self"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="두번째 행운"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 두번째 행운"
+      data-gtm-event-name="link_click"
+      style="bottom: 14%; left: 6%; width: 87%; height: 9%"
+      onclick="event.preventDefault(); document.querySelector('#second-section').scrollIntoView({behavior: 'smooth'})"
+      >두번째 행운</a
+    >
+    <a
+      href="#"
+      class="event_detail_a btn_get_round a-self"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="세번째 행운"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 세번째 행운"
+      data-gtm-event-name="link_click"
+      style="bottom: 4%; left: 6%; width: 87%; height: 9%"
+      onclick="event.preventDefault(); document.querySelector('#third-section').scrollIntoView({behavior: 'smooth'})"
+      >세번째 행운</a
+    >
+  </div>
+
+  <!-- 첫번째 행운 -->
+  <div class="event_detail" id="first-section">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250221-055444-812-pbyAruCa.png"
+      alt="하단참고"
+    />
+    <div class="blind">
+      <h2>첫번째 행운</h2>
+      <h3>새출발! 멋진 행운!</h3>
+      <p>사랑뿜뿜 새내기 부부라면 도전~</p>
+      <p>다이렉트 신혼 요금제 가입 시 추첨 경품</p>
+      <p>예비 신혼부부 찐 Wish List로 준비했어요. 가입하고 선물 받으세요!</p>
+
+      <div class="prize-section">
+        <div class="prize-item">
+          <strong>1명</strong>
+          <p>여행상품권 (200만원)</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>3명</strong>
+          <p>시그니엘 호텔 숙박권</p>
+          <p>LG 스탠바이미 2</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>2명</strong>
+          <p>h' Garden</p>
+          <p>Garden</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>1명</strong>
+          <p>EMPUR</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>10명</strong>
+          <p>LG 코드제로 로보킹 AI 올인원</p>
+          <p>홈파티 박스케이터링</p>
+          <p>CGV CINE de CHEF (2인)</p>
+        </div>
+      </div>
+
+      <div class="notice">
+        <p>*3월 4일(화)~4월 18일(금)까지 다이렉트 신혼 요금제 신규 가입 및 설치 완료 고객 대상</p>
+        <p>* 5월 8일(목)부터 순차 배송, 당첨자 개별 연락 예정, 인터넷 가입 시 작성한 주소 및 휴대폰 번호로 발송</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 두번째 행운 -->
+  <div class="event_detail" id="second-section">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250221-055427-882-8bgLyOeM.png"
+      alt="하단참고"
+    />
+    <div class="blind">
+      <h2>두번째 선물</h2>
+      <h3>신혼을 위해 모두 모였다</h3>
+      <p>함께 준비하는 최고의 신혼 혜택팩</p>
+      <p>다이렉트 신혼 요금제 가입자 모두!</p>
+      <p>시크릿 혜택팩은 절~대 친구 공유하시면 안되요!</p>
+
+      <div class="benefits-section">
+        <div class="benefit-item">
+          <h4>코웨이 렌탈</h4>
+          <p>등록비 0원, 설치비 0원</p>
+          <p class="brand">coway</p>
+        </div>
+
+        <div class="benefit-item">
+          <h4>그리고 특별혜택</h4>
+          <div class="sub-benefit">
+            <h5>롯데면세점</h5>
+            <p class="brand">LOTTE</p>
+            <p>난 롯데면세권에 산다</p>
+            <p class="highlight">FREE</p>
+            <p>제휴 쿠폰으로 스페셜한 쇼핑</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <h4>바른손카드</h4>
+          <p>청첩장 단독 할인쿠폰</p>
+          <p class="notice">*가입하면 바로 드려요</p>
+          <p class="brand">The Original Since 1970</p>
+          <p class="brand">Barunson Card</p>
+        </div>
+
+        <div class="benefit-item">
+          <h4>신세계면세점</h4>
+          <p>스페셜 면세포인트</p>
+          <p>웨딩 멤버십 혜택까지 누리세요</p>
+          <p class="brand">SHINSEGAE</p>
+          <p class="brand">DUTYFREE</p>
+        </div>
+
+        <div class="benefit-item">
+          <h4>까사미아</h4>
+          <p class="brand">casamia</p>
+          <p>가구/소품 할인쿠폰</p>
+        </div>
+
+        <div class="benefit-item">
+          <h4>CGV</h4>
+          <p>쉐프가 있는 영화관</p>
+          <p>CINE de CHEF 10% 할인쿠폰</p>
+        </div>
+
+        <div class="benefit-item">
+          <h4>miso</h4>
+          <p>시간을 선물합니다</p>
+          <p class="brand">miso</p>
+          <p>집 청소 서비스 할인쿠폰</p>
+        </div>
+      </div>
+
+      <div class="notice">
+        <p>*3월 4일(화)~4월 18일(금)까지 다이렉트 신혼 요금제 신규 가입 및 설치 완료 고객 대상</p>
+        <p>* 설치 후 7일 안에 인터넷 가입 시 작성한 모바일 번호로 혜택팩 발송(바른손 할인쿠폰은 가입 후 바로 발송)</p>
+        <p>* 상세 혜택 조건은 혜택팩 문자메시지(LMS) 및 혜택 페이지에서 확인 가능</p>
+      </div>
+    </div>
+    <button
+      data-route=""
+      class="event_detail_a"
+      onclick="telCnslPop();"
+      data-gtm-event-name="link_click"
+      data-gtm-event-category="클릭"
+      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+      data-gtm-event-label="컨텐츠 : 가입 상담 신청"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-direction="내부"
+      data-gtm-click-text="가입 상담 신청"
+      style="bottom: 0.5%; left: 22%"
+    >
+      <span>가입 상담 신청</span>
+    </button>
+  </div>
+
+  <!-- 세번째 행운 -->
+  <div class="event_detail" id="third-section">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250224-095017-091-OD04BRtH.png"
+      alt="하단참고"
+    />
+    <div class="blind">
+      <h2>세번째 이야기</h2>
+      <h3>우리, 어떻게 사랑했을까</h3>
+      <p>설레었던 첫만남도, 행복했던 추억도, 많이 다투었던 순간도</p>
+      <p>여러분의 애틋한 사연을 응모해주세요!</p>
+
+      <div class="event-period">
+        <p>참여 기간 : 3월 4일(화) ~ 4월 18일(금)</p>
+        <p>사연 선정 발표 : 5월 8일(목)</p>
+      </div>
+
+      <div class="prize-section">
+        <div class="prize-item">
+          <strong>1명</strong>
+          <p class="prize-type">Best 사연</p>
+          <p class="prize-icon">pay</p>
+          <p class="prize-amount">50만원</p>
+          <p class="prize-detail">네이버페이 50만원</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>10명</strong>
+          <p class="prize-type">우수 사연</p>
+          <p class="prize-icon">pay</p>
+          <p class="prize-amount">10만원</p>
+          <p class="prize-detail">네이버페이 10만원</p>
+        </div>
+
+        <div class="prize-item">
+          <strong>100명</strong>
+          <p class="prize-type">사연 작성 선착순</p>
+          <p class="prize-icon">pay</p>
+          <p class="prize-amount">1만원</p>
+          <p class="prize-detail">네이버페이 1만원</p>
+        </div>
+      </div>
+
+      <p class="notice">* 선정된 Best 사연은 추후 인터뷰 혹은 콘텐츠로 제작될 수 있습니다.</p>
+    </div>
+    <button
+      type="button"
+      onclick="externalServices.dispatchMessageEvent('EventCustomerDb',{action:'clickEvetPtpn',params:{}})"
+      class="event_detail_btn"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="사연 응모하기"
+      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 사연 응모하기"
+      data-gtm-event-name="button_click"
+      style="bottom: 11%; height: 8%; left: 22%"
+    >
+      <span class="blind">사연 응모하기</span>
+    </button>
+  </div>
+
+  <div class="event_detail">
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250221-055402-089-DgZ6DskU.png"
+      alt="하단참고"
+    />
+    <div class="blind">
+      <h2>부담없는 요금</h2>
+      <h3>오직 공식몰에서만 가능한 다이렉트 신혼 요금제 출시!</h3>
+
+      <div class="intro-section">
+        <p>예비 부부 및 결혼 3년 이내 신혼 부부 전용</p>
+        <p>일반 3년 약정 인터넷보다 더 저렴하게</p>
+        <p>U+공식온라인스토어인 유플닷컴만의 특별한 요금제</p>
+      </div>
+
+      <div class="price-comparison">
+        <div class="price-item">
+          <p class="duration">5년 2,244,000원</p>
+          <p class="title">부담없는 인터넷 최저 요금</p>
+          <p class="discount">매월 4,400원 할인</p>
+          <p class="total-discount">총 264,000원</p>
+          <p class="monthly">월 37,400원</p>
+          <p class="total">5년 1,980,000원</p>
+          <p class="final">월 33,000원</p>
+          <p class="plan">프리미엄 안심 500M<br />(3년 약정/5년 사용)</p>
+          <p class="plan-type">다이렉트 신혼 500M<br />(5년 사용 전용 요금제)</p>
+        </div>
+      </div>
+
+      <div class="wifi-section">
+        <h4>신혼만의 무선 인터넷 환경</h4>
+        <p>와이파이 공유기 2대 제공 (인터넷 500M 이상)</p>
+        <div class="wifi-devices">
+          <div class="device">기가와이파이6 (기본형)</div>
+          <div class="device">기가와이파이6</div>
+        </div>
+      </div>
+
+      <div class="internet-plans">
+        <h4>우리집 맞춤 인터넷 선택</h4>
+
+        <div class="plan-options">
+          <div class="plan-option">
+            <h5>100M</h5>
+            <p class="plan-name">다이렉트 신혼 100M</p>
+            <p class="price">월 23,100원</p>
+            <p class="discounted-price">월 16,200원</p>
+          </div>
+
+          <div class="plan-option">
+            <h5>500M</h5>
+            <p class="plan-name">다이렉트 신혼 500M</p>
+            <p class="price">월 33,000원</p>
+            <p class="discounted-price">월 21,450원</p>
+          </div>
+
+          <div class="plan-option">
+            <h5>1G</h5>
+            <p class="plan-name">다이렉트 신혼 1기가</p>
+            <p class="price">월 38,500원</p>
+            <p class="discounted-price">월 23,100원</p>
+          </div>
+        </div>
+
+        <div class="plan-notes">
+          <p>*기준 : 인터넷 5년 약정 기준, 부가세 포함</p>
+          <p>*할인: 온라인 단독 할인+휴대폰 결합할인(참 쉬운 가족 결합)</p>
+          <p>* 이벤트 기간 내 다이렉트 신혼 요금제로 인터넷 가입하면 이벤트에 자동 응모 됩니다.</p>
+        </div>
+      </div>
+
+      <div class="benefits-section">
+        <h4>인터넷 가입 혜택</h4>
+        <h5>공식몰이니까 가능한 최대 354만원 풍성한 가입 혜택</h5>
+
+        <div class="benefit-items">
+          <div class="benefit-item">
+            <h6>온라인 단독 할인</h6>
+            <p>인터넷</p>
+            <p>IPTV</p>
+          </div>
+
+          <div class="benefit-item">
+            <h6>최대 혜택으로 받는 사은품</h6>
+            <p>최대 46만원 상품권/무료 가전 (택1)</p>
+            <p>온라인 단독 할인</p>
+            <p>최대 13만원 추가 요금할인</p>
+          </div>
+
+          <div class="benefit-item">
+            <h6>결합 및 제휴 혜택</h6>
+            <p>최대 295만원 할인 및 혜택</p>
+          </div>
+        </div>
+
+        <div class="benefit-notes">
+          <p>* 사은품 : 5년 약정 인터넷(다이렉트 신혼 1기가) + 3년 약정 IPTV(베이직) + 3년 약정 스마트홈 결합 기준</p>
+          <p>* 요금 할인 : 5년 약정, 인터넷(다이렉트 신혼 1기가)기준</p>
+        </div>
+      </div>
+    </div>
+    <a
+      class="event_detail_btn btn_get_round"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="온라인1분가입"
+      data-gtm-click-url="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001816"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 온라인1분가입"
+      data-gtm-event-name="link_click"
+      data-route=""
+      href="/signup/internet?urcHmProdNoList=990001816"
+      style="bottom: 45.9%; left: 42%; width: 34%; height: 2%"
+      >온라인1분가입
+    </a>
+    <a
+      class="event_detail_btn btn_get_round"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="온라인1분가입"
+      data-gtm-click-url="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001817"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 온라인1분가입"
+      data-gtm-event-name="link_click"
+      data-route=""
+      href="/signup/internet?urcHmProdNoList=990001817"
+      style="bottom: 39.7%; left: 42%; width: 34%; height: 2%"
+      >온라인1분가입
+    </a>
+    <a
+      class="event_detail_btn btn_get_round"
+      data-gtm-click-direction="내부"
+      data-gtm-click-location="이벤트상세 영역"
+      data-gtm-click-text="온라인1분가입"
+      data-gtm-click-url="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001818"
+      data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+      data-gtm-event-category="클릭"
+      data-gtm-event-label="컨텐츠 : 온라인1분가입"
+      data-gtm-event-name="link_click"
+      data-route=""
+      href="/signup/internet?urcHmProdNoList=990001818"
+      style="bottom: 33.6%; left: 42%; width: 34%; height: 2%"
+      >온라인1분가입
+    </a>
+  </div>
+
+  <!-- 유의사항 -->
+  <div class="footerWrap">
+    <h3>꼭 확인하세요!</h3>
+    <div class="acType">
+      <div id="accordion">
+        <!-- 아코디언 섹션 : 인터넷 가입 시 유의사항 -->
+        <button onclick="accordianClick(this)" class="titType">인터넷 가입 시 유의사항</button>
+        <div class="subDepth" style="display: none">
+          <ul>
+            <li>5년 약정으로 다이렉트 신혼 요금제 인터넷 신규 가입하는 경우 제공되는 할인 혜택입니다.</li>
+            <li>
+              휴대폰 결합 할인은 '참 쉬운 가족 결합 할인'으로 다이렉트 신혼 1기가 기준 휴대폰 1회선 이상 결합 시 월
+              13,200원 할인 적용됩니다.
+            </li>
+            <li>
+              제휴카드 할인은 'LG U+ X LOCA 롯데카드'로 통신료 자동이체 신청 후 전월 이용 실적이 30만원 이상인 경우 월
+              20,000원 할인이 적용됩니다. <br />
+              (카드발급 기간에 따라 할인율 변동 가능)
+            </li>
+          </ul>
+        </div>
+
+        <!-- 아코디언 섹션 : 가입 사은품 관련 유의사항 -->
+        <button onclick="accordianClick(this)" class="titType">가입 사은품 관련 유의사항</button>
+        <div class="subDepth" style="display: none">
+          <ul>
+            <li>
+              인터넷(다이렉트 신혼 1기가) 5년 약정 + U+tv(베이직) 3년 약정 + 스마트홈 3년 약정 동시 신규 가입하는 경우
+              제공합니다.
+            </li>
+            <li>일부 사은품과 모델명은 변경될 수 있습니다.</li>
+            <li>사은품 수량이 부족한 경우 다른 상품으로 변경될 수 있으며, 상품을 받으신 후에는 교환 할 수 없습니다.</li>
+            <li>
+              개통 완료 후 실사용 기간 1년 이내 해지 혹은 요금제 변경 시 받은 사은품에 대한 해지반환금이 발생합니다.<br />
+              (요금제 변경 시 발생되는 반환금은 더 저렴한 요금제로의 변경에 한하며, 기존/변경 요금제에 따라 발생되는
+              반환 금액은 상이합니다.)
+            </li>
+            <li>사은품은 가입 당시 작성한 주소로 2주 이내에 배송해 드립니다.</li>
+            <li>사은품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후 모든 정보는 폐기됩니다.</li>
+            <li>모바일 상품권의 금액은 가입한 서비스의 종류와 약정기간에 따라 다릅니다.</li>
+            <li>모든 금액은 부가세 포함 금액입니다.</li>
+            <li>
+              자세한 내용은 유플러스닷컴 고객센터(1644-7070)로 문의 바랍니다.(평일 9시~18시 30분, 토요일 9시~12시 / 상담
+              예약은 24시까지 가능)
+            </li>
+          </ul>
+        </div>
+
+        <!-- 아코디언 섹션 : 다이렉트 신혼 요금제 출시 기념 이벤트 유의사항 -->
+        <button onclick="accordianClick(this)" class="titType">다이렉트 신혼 요금제 출시 기념 이벤트 유의사항</button>
+        <div class="subDepth" style="display: none">
+          <ul>
+            <li>
+              2025년 4월 18일까지 유플러스닷컴에서 인터넷(다이렉트 신혼 요금제) 신규 가입 및 설치 완료한 고객을 대상으로
+              첫번째 이벤트는 추첨을 통해 경품을, 두번째 이벤트는 가입자 전원에게 혜택팩을 지급합니다.
+            </li>
+            <li>기존 인터넷 가입자가 요금제만 변경한 경우는 대상자에 포함되지 않습니다.</li>
+            <li>
+              이벤트 당첨자 발표는 별도로 진행하지 않으며, 경품 이벤트의 경우 당첨자에 한해 개별적으로 연락 드립니다.
+            </li>
+            <li>경품 및 혜택팩은 대상자에게 인터넷 신규 가입 시 작성한 주소 및 휴대폰 번호로 발송될 예정입니다.</li>
+            <li>당첨자와 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.</li>
+            <li>혜택팩의 개인별 할인코드는 타인 공유가 불가하며 사용 시 재 발급 되지 않습니다.</li>
+            <li>잘못 등록된 개인정보로 인해 경품 발송대상자에서 제외되었을 경우 주최측이 책임지지 않습니다.</li>
+            <li>
+              경품은 상품 및 모델명이 변경될 수 있으며, 부득이한 경우 해당 경품과 동일한 금액의 상품권으로 변경 될 수
+              있습니다.
+            </li>
+            <li>
+              유효기간이 있는 모바일 상품권 등의 경품은 유효기간 만료로 사용 불가에 대해 책임지지 않으며 재발송 및 환불
+              대상이 아닙니다.
+            </li>
+            <li>
+              본 이벤트는 주최측 사정에 의해 사전 예고 없이 종료될 수 있으며, 이벤트 기간이 지난 뒤 가입한 경우 당첨
+              대상에서 제외됩니다.
+            </li>
+          </ul>
+        </div>
+        <!-- 아코디언 섹션 : 인터넷 가입 시 유의사항 END -->
+      </div>
+    </div>
+  </div>
+  <!-- //유의사항 -->
+</div>
+
+<script>
+  /* 다중 아코디언 함수 */
+  (function (window) {
+    function accordianClick(target) {
+      var parent = target.closest("#accordion");
+      var titTypes = parent.querySelectorAll(".titType");
+      var subDepths = parent.querySelectorAll(".subDepth");
+      var content = target.nextElementSibling;
+      var on = "ui-state-active";
+      var checkActive = target.classList.contains(on);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        content.style.display = "none";
+      } else {
+        titTypes.forEach(function (titType) {
+          titType.classList.remove(on);
+        });
+        subDepths.forEach(function (subDepth) {
+          subDepth.style.display = "none";
+        });
+        target.classList.add(on);
+        content.style.display = "block";
+      }
+    }
+
+    // 메인 가입상담신청 팝업
+    function telCnslPop() {
+      const props = {
+        externalInfo: {
+          onlnCnslJobDivsCd: "3",
+          appfLednChnlDivsCd: "01",
+          appfLednDivsCd: "01",
+          appfProdSvcDivsCd: "02",
+          operationId: "telreg",
+          calEvetNm: "다이렉트 신혼 요금제",
+        },
+      };
+      externalServices.dispatchMessageEvent("EventTelInternetCnslPopup", props);
+    }
+
+    // 전역 스코프에 함수 바인딩
+    window.accordianClick = accordianClick;
+    window.telCnslPop = telCnslPop;
+  })(window);
+</script>
