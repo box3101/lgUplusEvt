@@ -1,11 +1,37 @@
 <!-- mw -->
 <style type="text/css">
+  .top_banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 45;
+    width: 100%;
+  }
+
+  .top_banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+  }
+
+  .top_banner + .event_detail {
+    padding-top: 11.56vw;
+  }
+
   .new_evt_wrap {
     position: relative;
   }
 
   .new_evt_wrap .event_detail {
     position: relative;
+    margin-top: -2px;
+    overflow: hidden;
   }
 
   .new_evt_wrap .event_detail .event_detail_btn {
@@ -34,92 +60,952 @@
     border-radius: 3.5vw;
   }
 
+  /* 스와이퍼 */
+  .benefits_swiper {
+    position: absolute;
+    bottom: 12vw;
+    padding: 0 5.555vw;
+  }
+
+  .ev-slide-01 .ev-slide__container {
+    padding: 0 0 21vw;
+    overflow: visible;
+  }
+  .ev-slide-01 .ev-slide__container::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 6vw;
+    height: 100%;
+    background: #000628;
+    top: 0;
+    left: -6vw;
+    z-index: 30;
+  }
+  .ev-slide-01 .ev-slide__container::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 5.8vw;
+    height: 100%;
+    background: #000628;
+    top: 0;
+    right: -6vw;
+    z-index: 30;
+  }
+
+  .ev-slide-01 .ev-slide__container .ev-slide__stage {
+    text-align: center;
+  }
+
+  .ev-slide-01 .ev-slide__container .ev-slide__stage img {
+    width: 85%;
+  }
+
+  .ev-slide-01 .ev-slide-controls__arrow {
+    position: absolute;
+    width: 11.11vw;
+    height: 11.11vw;
+    z-index: 40;
+    bottom: 58%;
+  }
+
+  .ev-slide-01 .ev-slide-controls__arrow--prev {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-022150-281-EDUKF3jk.png")
+      no-repeat center center / 100%;
+    left: -5%;
+  }
+  .ev-slide-01 .ev-slide-controls__arrow--next {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-022145-717-mzKKZ7p6.png")
+      no-repeat center center / 100%;
+    right: -5%;
+  }
+  .ev-slide .ev-slide-controls__play {
+    width: 32px;
+    height: 32px;
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-045033-394-BZbclyUU.png")
+      top 12px center no-repeat;
+    background-size: 10px;
+  }
+  .ev-slide .ev-slide-controls__play.is-pause {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-045028-785-rB766WZP.png")
+      top 12px center no-repeat;
+    background-size: 10px;
+  }
+
+  .ev-slide .ev-slide-controls__paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ev-slide .swiper-pagination {
+    position: initial;
+    width: max-content;
+  }
+
+  .ev-slide .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+  }
+
+  .ev-slide .swiper-pagination-bullet-active {
+    width: 24px;
+    background: #0097e3 !important;
+    border-radius: 24px;
+  }
+
+  /* rc_plan */
+  .new_evt_wrap .event_detail .rc_plan {
+    background: #f3f3f3;
+  }
+
+  .new_evt_wrap .event_detail .rc_plan .event_detail_btn {
+    display: block;
+    position: absolute;
+    width: 88.888vw;
+    height: 60.056vw;
+    border-radius: 2.778vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* .new_evt_wrap .event_detail .rc_plan .event_detail_btn:hover {
+    outline: 2px solid #e6007e;
+    z-index: 2;
+  } */
+
   /* 유의사항 */
-  .footerWrap {
-    background: #2f2f2f;
-    padding: 40px 24px;
+  .footer_wrap {
+    background: #333;
+    padding: 39px 16px;
   }
 
-  .footerWrap h3 {
-    font-size: 20px;
-    font-weight: 700;
+  .footer_wrap h3 {
     color: #fff;
-    border-bottom: 2px solid #fefefe;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    padding: 0 10px 10px;
   }
 
-  .footerWrap ul li {
-    padding-left: 7px;
-    position: relative;
+  .footer_wrap .depth_anchor {
     font-size: 13px;
-    color: #b3b3b3;
-    line-height: 1.5em;
-    word-break: keep-all;
+    color: #637cda;
+    display: inline-block;
+    margin: 3px 0 5px;
+    border-bottom: 1px solid #637cda;
   }
 
-  .footerWrap ul li + li {
+  .acType .ui-accordion {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .acType .titType {
+    position: relative;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    color: #dedede;
+    padding: 16px 0 16px 10px;
+    border-bottom: 1px solid #8e8583;
+    box-sizing: border-box;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .acType .titType:first-child {
+    border-top: 1px solid #5d6164;
+  }
+
+  .acType .titType:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png")
+      no-repeat 50% 50%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType span {
+    text-indent: -10px;
+    padding-left: 10px;
+  }
+
+  .acType .titType.ui-state-active:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url("/common/images/hsvc/hsvc_event/blic_m_minus.png") no-repeat 50% 50%;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType.mul {
+    line-height: 1.3em;
+  }
+
+  .acType .titType.mul:before,
+  .acType .titType.active.mul:before {
+    top: 25px;
+  }
+
+  .acType .titType.active {
+    border-bottom: none;
+    color: #fff;
+  }
+
+  .acType .subDepth {
+    display: none;
+    padding: 20px 10px 20px 28px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fafafa;
+    border-bottom: 1px solid #756966;
+    box-sizing: border-box;
+  }
+
+  .acType .subDepth ul {
+    font-size: 13px;
+  }
+
+  .acType .subDepth ul > li {
+    position: relative;
+    margin-left: -10px;
+    word-break: break-all;
+  }
+
+  .acType .subDepth ul > li + li {
     margin-top: 6px;
   }
 
-  .footerWrap ul li:before {
-    content: "-";
+  .acType .subDepth ul > li:before {
+    content: "";
     position: absolute;
+    width: 4px;
+    height: 1px;
+    top: 9px;
+    left: -7px;
+    background-color: #fafafa;
+  }
+
+  .footer_wrap .footer_link {
+    display: inline-block;
+    margin-left: 3px;
+    padding: 3px 18px 3px 9px;
+    font-size: 13px;
+    color: #fff;
+    background: #777777;
+    vertical-align: middle;
+    border-radius: 50px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .footer_wrap .footer_link span:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 7px;
+    height: 10px;
+    background: url("https://www.lguplus.com/common/images/hsvc/hsvc_event/kids/kids_link_arrow.png") no-repeat 0 0;
+    background-size: 7px;
+  }
+
+  /* 하단 고정 바 */
+  .float_area {
+    position: fixed;
+    bottom: 22px;
     left: 0;
+    width: 92%;
+    margin: 0 4%;
+    overflow: hidden;
+    background: rgba(27, 27, 27, 0.8);
+    border-radius: 50px;
+    padding: 8px 0 8px 5%;
+    z-index: 2;
+    letter-spacing: -1.5px;
+    display: flex;
+    align-items: center;
+  }
+  .float_area a {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: initial;
+    padding: 14px 0 17px 48px;
+  }
+  .float_area a strong {
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .float_area a + p {
+    display: inline-block;
+    line-height: 12px;
+    vertical-align: middle;
+    margin-left: 2px;
+  }
+  .float_area a + p span {
+    display: block;
+    color: #b3b2b2;
+    font-size: 10px;
+  }
+  .float_area .call_wrap {
+    float: left;
+  }
+  .float_area .call_wrap a {
+    background: url("/common/images/hsvc/hsvc_event/cmm/m_float_call_ico.png") no-repeat top 1px left 0;
+    background-size: 49px;
+  }
+  .float_area .float_btn_wrap {
+    float: right;
+    flex: 1;
+  }
+  .float_area .float_btn_wrap a {
+    background: url("/common/images/hsvc/hsvc_event/cmm/m_float_cnsl_ico.png") no-repeat top 1px left 0;
+    background-size: 49px;
+    text-decoration: none;
+  }
+  .float_area .float_btn_wrap a span {
+    color: #ffffff;
+  }
+  .float_area .txt_wrap {
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+    flex: 1;
+  }
+  .float_area .txt_wrap strong {
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  .float_area .txt_wrap p {
+    font-size: 10px;
+    color: #b3b2b2;
+  }
+
+  /* 팝업 */
+  .layer-open {
+    overflow: hidden;
+  }
+
+  .ui_modal_wrap {
+    display: none;
+    position: fixed;
+    inset: 0px;
+    overflow: auto;
+    z-index: 46;
+  }
+
+  .ui_modal_wrap.on {
+    display: block;
+  }
+
+  .ui_modal_wrap .ui_modal_container {
+    display: block;
+    position: absolute;
+    outline: none;
+    background-clip: padding-box;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 90%;
+  }
+
+  .ui_modal_wrap .ui_modal_dim {
+    position: fixed;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .type2 .share_layer .share_layer_inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    border-radius: 4.444vw;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .type2 .share_layer .share_layer_inner .share_layer_tit {
+    padding: 11.111vw 0 5.556vw;
+    text-align: center;
+  }
+
+  .type2 .share_layer .share_layer_inner .share_pop_cont {
+    text-align: center;
+    max-height: 65vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+  }
+  .type2 .share_layer .share_layer_inner .share_pop_cont .popcont {
+    padding: 0 5.278vw 29vw 5.278vw;
+  }
+
+  .type2 .share_layer .share_layer_inner .share_pop_cont .imglist > li {
+    width: 100%;
+    margin-bottom: 4.444vw;
+  }
+
+  .type2 .share_layer .share_layer_inner .share_pop_cont img {
+    width: 100%;
+    height: auto;
+  }
+  .type2 .share_layer .share_layer_inner .share_pop_cont .popcont .float_box {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 8.333vw 0 8.889vw;
+    background-color: #fff;
+    border-radius: 0 0 4.444vw 4.444vw;
+  }
+  .type2 .share_layer .share_layer_inner .share_pop_cont .popcont .imglist > li {
+    width: 100%;
+    margin-bottom: 4.444vw;
+  }
+
+  .type2 .share_layer .share_layer_inner .layer_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8.889vw;
+    height: 8.889vw;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_pop_close.png") no-repeat 0 0;
+    background-size: 100%;
+    font-size: 0;
+  }
+
+  .type2 .share_layer .share_layer_inner .layer_close button {
+    width: 100%;
+    height: 100%;
   }
 </style>
 
 <div class="new_evt_wrap">
+  <div class="top_banner">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-031800-839-kIHqDce8.png"
+      alt="LG유플러스 X Samsung Card 복지몰"
+    />
+  </div>
   <div class="event_detail">
     <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250121-040044-746-DaAUry2M.png"
       alt="하단 내용 참조"
-      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241129-041902-380-iIXgJLev.png"
     />
     <div class="blind">
-      <h2>유플러스닷컴 2025 NEW 키즈폰 광고</h2>
-      <p>
-        AI로 더 똑똑해진 안심케어 U+키즈폰 무니 에디션 경품 주소 입력 페이지.
-        출시 이벤트에 참여하세요. '무니 스페셜 기프트 박스' 받으실 배송 주소를
-        입력해주세요.
-      </p>
-      <h3>참여 대상</h3>
-      <p>
-        이벤트 기간 내 유플러스닷컴에서 U+키즈폰 무니 에디션 구매 고객 중 주소
-        입력 분자 안내 받으신 고객님.
-      </p>
-      <h3>참여 방법</h3>
-      <p>
-        하단의 '경품 배송 주소 입력하기' 버튼을 눌러 개인 정보 입력 및 제출.
-      </p>
-      <h3>유의사항</h3>
+      <p>인터넷+IPTV 가입 이벤트id</p>
+      <h2>LG유플러스와 복지몰의 첫 만남</h2>
+      <p>임직원만의 혜택 유플러스가 쏜다</p>
+      <p>복지몰에서 인터넷+IPTV 신규 가입하고 최대 277만원 혜택을 받으세요</p>
+    </div>
+    <a
+      data-route
+      class="event_detail_btn"
+      href="javascript:void(0)"
+      onclick="javascript:callOnsalePop('Home_Bluevery', 'M'); return false;"
+      style="width: 53%; height: 13.5vw; top: 31.7%; left: 23%"
+    >
+      <span>가입 상담 신청</span>
+    </a>
+    <div class="benefits_swiper">
+      <div class="ev-slide ev-slide-01" data-event-carousel>
+        <div
+          class="swiper-container ev-slide__container"
+          data-swiper-option='{
+            "autoplay": {
+              "delay": 3000
+            },
+            "pagination": {
+                "ui": "dots",
+                "clickable": "true"
+            },
+            "spaceBetween": 0, 
+            "slidesOffsetBefore": 0, 
+            "slidesOffsetAfter": 0,
+            "loop": true,
+            "loopAdditionalSlides": 1
+          }'
+        >
+          <div class="swiper-wrapper ev-slide__list">
+            <!-- 1 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-015156-578-YanXrQVU.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>유플닷컴에서만 할인 받을 수 있는 최대 262만원 혜택 안내 드려요</h5>
+                </div>
+                <div class="blind">
+                  <p>최대 46만원 상품권 or 50인치 TV 인기 사은품 무료 제공</p>
+                </div>
+                <button
+                  type="button"
+                  class="event_detail_btn event_modal_open1"
+                  onclick="openLayerEvent(this)"
+                  style="left: 50%; transform: translateX(-50%); bottom: 9.6%; width: 52%; height: 12.5vw; padding: 0"
+                  data-layer="event_modal_layer1"
+                  data-gtm-event-name="button_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+                  data-gtm-event-label="컨텐츠 : 사은품 보기"
+                  data-gtm-click-location="이벤트상세 영역"
+                  data-gtm-click-text="사은품 보기"
+                >
+                  <span class="blind">사은품 보기</span>
+                </button>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-015200-999-QYPh3zEG.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <p>유플러스 단독 최대 11만원 추가 요금 할인</p>
+                  <p>온라인 단독할인</p>
+                  <p>매월 청구 요금에서 추가 할인</p>
+                  <p>*3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV(프리미엄 VOD) 기준</p>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-015205-162-pE6QmjKe.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>인터넷+IPTV 결합 시 최대 39만원 요금 할인(월 11,000원 할인 X 36개월)</h5>
+                  <p>(인터넷+IPTV 결합 이미지) ※ 3년 약정, 인터넷(프리미엄 안심 1기가) + IPTV(프리미엄 VOD) 기준</p>
+                </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250107-044156-482-tngD0TUq.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>휴대폰 결합 시 최대 112만원 요금 할인 월 31,000원 할인 X 36개월</h5>
+                  <p>인터넷 500M 이상 11,000원 할인</p>
+                  <p>2인 10,000원 할인</p>
+                  <p>3인 14,000원 할인</p>
+                  <p>4인 20,000원 할인</p>
+                  <p>*U 투게더 결합 시 적용되는 추가 할인</p>
+                </div>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250107-044201-083-uBYTo77e.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>U+ 모바일 tv 기본 월정액 무료 제공 월 5,500원 X 36개월</h5>
+                  <p>
+                    U+ 모바일 tv앱을 통해 실시간 채널, TV 다시보기, 무료영화, 애니메이션 등을 시청할 수 있습니다. (단,
+                    무료 제공 가능한 모바일 요금제 사용 시)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250107-044205-217-dOXdTqiE.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>웰컴 쿠폰 증정</h5>
+                  <p>(웰컴 쿠폰 증정 이미지) 월정액 첫달 무료 6종 + VOD 5천원 할인</p>
+                  <p>
+                    ※ 휴대폰에서 U 모바일 tv 앱을 통해 실시간 채널, TV 다시보기, 무료영화, 애니메이션 등을 시청할 수
+                    있습니다. (단, 무료 제공 가능한 모바일 요금제 사용 시)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-015223-148-JJ4QMvT7.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>무료 제공 기기 월 4,950원 X 36개월</h5>
+                  <p>내 라이프 스타일에 맞춰 원하는 기기 추가 제공</p>
+                  <p>※ 프리미엄 안심 500M 이상 : 기가와이파이6 + 추가 기기 택1(기가와이파이6 or 스마트홈 스피커)</p>
+                </div>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="swiper-slide ev-slide__slide">
+              <div class="ev-slide__stage">
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-015226-957-lL6JsN2V.png"
+                  alt="하단내용 참조"
+                />
+                <div class="blind">
+                  <h5>U+tv 콘텐츠 할인 월 2,200원 X 36개월</h5>
+                  <p>U+멤버십 VOD 할인 20%</p>
+                  <p>유료 VOD 콘텐츠 20% 할인</p>
+                  <p>
+                    *최신 VOD (11,000원) 월 1회 구매 기준, 기존 월정액/유료채널 상품은 할인 적용 불가 *사용방법 : U+tv
+                    콘텐츠 선택 > 구매하기 > U+멤버십 할인 적용
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ev-slide-controls">
+            <button
+              type="button"
+              class="ev-slide-controls__arrow ev-slide-controls__arrow--prev"
+              data-swiper="PREV"
+              aria-label="이전 슬라이드 보기"
+            ></button>
+            <button
+              type="button"
+              class="ev-slide-controls__arrow ev-slide-controls__arrow--next"
+              data-swiper="NEXT"
+              aria-label="다음 슬라이드 보기"
+            ></button>
+            <div class="ev-slide-controls__paging">
+              <div class="swiper-pagination"></div>
+              <button type="button" class="ev-slide-controls__play" data-swiper="PLAY"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="event_detail">
+    <img
+      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250123-014816-000-Rq3tnDda.png"
+      alt="하단 내용 참조"
+    />
+    <div class="blind">
+      <h2>복지몰에서 제공하는 임직원 특별 혜택</h2>
+      <p>임직원 본인이 인터넷/IPTV 가입하면 최대 15만 복지포인트 추가 제공 (이벤트 포인트)</p>
+      <p>15만 복지포인트 쿠폰 이미지</p>
+      <ul>
+        <li>step1 가입상담신청 상담신청 버튼을 눌러주세요</li>
+        <li>step2 가입할 임직원 본인의 이름,연락처를 입력하세요</li>
+        <li>step3 상담 및 가입완료 후 복지포인트가 지급됩니다.</li>
+      </ul>
+      <p>유의사항</p>
       <ul>
         <li>
-          입력한 개인 정보는 U+키즈폰 무니 에디션 구매자 정보와 동일 해야 함
+          ※ 인터넷 가입하실 임직원 본인의 이름과 휴대폰 번호를 입력해 주세요. (임직원 본인 외 타인의 정보를 남기는 경우
+          복지 포인트가 지급되지 않을 수 있습니다.)
         </li>
         <li>
-          등록 요청 기간까지 배송정보를 입력하지 않을 경우, 제품 발송이
-          불가하오니 기간 내 꼭등록해주세요.
+          ※ 인터넷+IPTV 동시 가입 시 인터넷 1G / 500M 가입은 15만 포인트, 100M 가입은 10만 포인트로 차등 지급됩니다.
         </li>
-        <li>
-          잘못된 정보 (개롱정보 - 전화번호, 이름, 배송정보)로 인한 경품 미
-          수령에 대한 책임은 당첨자 본인에게 있으며, 재발송 되지 않습니다
-        </li>
+        <li>※ 인터넷 단독 가입 인터넷 1G / 500M 가입은 10만 포인트, 100M 가입은 5만 포인트로 차등 지급됩니다.</li>
+        <li>※ 복지 포인트는 개통 완료 후 다다음달에 지급됩니다. (9월 개통 설치 시 11월 지급)</li>
+        <li>※ 복지 포인트 사용 기간 : 지급 일로부터 1년 (ex, 2025년 1월 1일 지급 시 2025년 12월 31일까지 사용 가능)</li>
       </ul>
     </div>
-    <button
-      type="button"
-      onclick="externalServices.dispatchMessageEvent('EventCustomerDb',{action:'clickEvetPtpn',params:{}})"
-      class="event_detail_btn btn_join"
-      data-gtm-click-location="이벤트상세 영역"
-      data-gtm-click-text="경품 배송 주소 입력하기"
-      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
-      data-gtm-event-category="클릭"
-      data-gtm-event-label="컨텐츠 : 경품 배송 주소 입력하기"
-      data-gtm-event-name="button_click"
-      data-route=""
-      style="bottom: 9vw; left: 23%; width: 54vw; height: 12vw"
-    >
-      <span class="blind">경품 배송 주소 입력하기</span>
-    </button>
   </div>
+  <div class="event_detail">
+    <div class="rc_plan">
+      <img
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250109-100752-489-PKRgvsJl.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <h2>가장 많이 선택한 인터넷+IPTV 추천요금제</h2>
+        <p>
+          웹서핑을 편리하게, 인기 채널 모두 담은, 인터넷 100M + 베이직, 월 39,600원에서 할인된 월 34,130원 , 상품권
+          30만원 증정
+        </p>
+        <p>
+          영상은 끊김없이, VIP 전용관 혜택을 위한 인터넷 500M + 프리미엄, 월 66,100원에서 할인된 월 40,150원 , 상품권
+          40만원 증정
+        </p>
+        <p>
+          고사양 게임을 가장 빠르게, 인터넷 1기가 + 프리미엄 VOD, 월 67,100원에서 할인된 월 44,000원 , 상품권 43만원
+          증정
+        </p>
+        <p>*3년 약정, 프리미엄 안심 인터넷 요금제 기준, 휴대폰 결합, 부가세 포함</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layer Popup -->
+  <div class="type2">
+    <div class="ui_modal_wrap event_modal event_modal_layer1">
+      <div class="ui_modal_dim ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)"></div>
+      <div class="share_layer ui_modal_container">
+        <div class="share_layer_inner">
+          <div class="share_layer_tit">
+            <img
+              src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/tabB_h5a.png"
+              alt="최대 혜택으로 받을 수 있는 인기 사은품(택1) ※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈
+              결합 기준"
+              style="width: 63.333vw; height: 29.167vw"
+            />
+            <h4 class="blind">최대 혜택으로 받을 수 있는 인기 사은품(택1)</h4>
+            <p class="blind">※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈 결합 기준</p>
+            <div class="layer_close">
+              <button
+                type="button"
+                class="ui_modal_close"
+                data-reverse="event_modal_open1"
+                onclick="closeLayerEvent(this)"
+              >
+                <span class="blind">닫기</span>
+              </button>
+            </div>
+          </div>
+          <div class="share_pop_cont">
+            <div class="popcont">
+              <ul class="imglist">
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-031933-488-F259XWsj.png"
+                    alt="모바일 신세계(이마트) 상품권, 모바일 롯데 상품권 46만원 상당"
+                  />
+                  <p class="blind">모바일 신세계(이마트) 상품권, 모바일 롯데 상품권<em>46만원 상당</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-031941-566-38wJYhFh.png"
+                    alt="LG 50인치 UHD TV (정가 956,000원) 혜택가 0원"
+                  />
+                  <p class="blind">
+                    LG 50인치 UHD TV (정가 956,000원)
+                    <em>혜택가 0원</em>
+                  </p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040622-170-yigbyFT4.png"
+                    alt="LG 오브제컬렉션 A9S 무선청소기 (정가 540,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 오브제컬렉션 A9S 무선청소기 (정가 540,000원)<em>혜택가 0원</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040626-892-3gmTZbwU.png"
+                    alt="LG 룸앤 TV (정가 360,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 룸앤 TV (정가 360,000원)<em>혜택가 0원</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040631-272-yI5CtSCU.png"
+                    alt="LG 오브제컬렉션 공기청정기 (정가 410,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 오브제컬렉션 공기청정기 (정가 410,000원)<em>혜택가 0원</em></p>
+                </li>
+              </ul>
+              <div class="float_box">
+                <button
+                  onclick="closeLayerEvent(this);callOnsalePop('Home_Bluevery', 'M'); return false;"
+                  style="top: 0"
+                  data-gtm-event-name="button_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="플로팅 영역- 버튼 클릭"
+                  data-gtm-event-label="컨텐츠 : 상담 예약하기"
+                  data-gtm-click-location=" 플로팅 영역"
+                  data-gtm-click-text="상담 예약하기"
+                >
+                  <img
+                    src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_btn_mk_reserve.png"
+                    alt="상담 예약하기"
+                    style="width: 37.778vw; height: 11.667vw"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 유의사항 -->
+  <div class="footer_wrap">
+    <h3>꼭 확인하세요!</h3>
+    <div class="acType">
+      <div id="accordion" class="accordions_conts_wrap">
+        <button class="titType" aria-controls="_accordion_001" aria-expanded="false" onclick="accordianClick(this)">
+          인터넷/IPTV 가입시 유의사항
+        </button>
+        <div id="_accordion_001" class="subDepth">
+          <ul>
+            <li>3년 약정으로 인터넷 신규 가입하는 경우 제공되는 할인 혜택입니다.</li>
+            <li>
+              다이렉트 요금제(1년 약정 인터넷), 가정 인터넷 외(소상공인 등) 가입 시 복지 포인트를 지급하지 않습니다.
+            </li>
+            <li>
+              휴대폰 결합 할인은 '참 쉬운 가족 결합 할인'으로 프리미엄 안심 1기가 기준 휴대폰 1회선 이상 결합 시 월
+              13,200원 할인 적용됩니다.
+              <a
+                data-route
+                target="_blank"
+                title="새창열림"
+                class="footer_link"
+                href="https://www.lguplus.com/benefit-uplus/combined-discount/B200000016"
+              >
+                <span>자세히 보기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="titType" aria-controls="_accordion_002" aria-expanded="false" onclick="accordianClick(this)">
+          사은품 관련 유의사항
+        </button>
+        <div id="_accordion_002" class="subDepth">
+          <ul>
+            <li>
+              U<sup>+</sup>인터넷(프리미엄 안심 1기가) + U<sup>+</sup>tv(프리미엄 VOD 이상) 동시 신규 가입하는 경우
+              제공합니다.
+            </li>
+            <li>일부 사은품과 모델명은 변경될 수 있습니다.</li>
+            <li>사은품 수량이 부족한 경우 다른 상품으로 변경될 수 있으며, 상품을 받으신 후에는 교환 할 수 없습니다.</li>
+            <li>
+              개통 완료 후 실사용 기간 1년 이내 해지 혹은 요금제 변경 시 받은 사은품에 대한 해지반환금이 발생합니다.<br />
+              (요금제 변경 시 발생되는 반환금은 더 저렴한 요금제로의 변경에 한하며, 기존/변경 요금제에 따라 발생되는
+              반환 금액은 상이합니다.)
+            </li>
+            <li>사은품은 가입 당시 작성한 주소로 2주 이내에 배송해 드립니다.</li>
+            <li>사은품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후 모든 정보는 폐기됩니다.</li>
+            <li>모바일 상품권의 금액은 가입한 서비스의 종류와 약정기간에 따라 다릅니다.</li>
+            <li>모든 금액은 부가세 포함 금액입니다.</li>
+            <li>
+              자세한 내용은 유플러스닷컴 고객센터(1644-7070)로 문의 바랍니다.(평일 9시~18시 30분, 토요일 9시~12시 /
+              상담예약은 24시까지 가능)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //유의사항 -->
+
+  <!-- 하단 고정 바 MW -->
+  <div class="float_area">
+    <div class="txt_wrap">
+      <strong>임직원가입 전문 상담</strong>
+      <p>평일 09시~18시 30분, 토요일 09시~12시</p>
+    </div>
+
+    <div class="float_btn_wrap">
+      <a href="javascript:void(0)" onclick="callOnsalePop('Home_Bluevery', 'M'); return false;">
+        <span>가입상담 신청</span>
+      </a>
+    </div>
+  </div>
+  <!-- //하단 고정 바 MW -->
 </div>
+
+<script type="text/javascript">
+  function accordianClick(target) {
+    var parent = target.closest(".accordions_conts_wrap");
+    var titTypes = parent.querySelectorAll(".titType");
+    var subDepths = parent.querySelectorAll(".subDepth");
+    var content = target.nextElementSibling;
+    var on = "ui-state-active";
+    var re = new RegExp(" " + on);
+    var checkActive = re.test(target.className);
+    if (checkActive) {
+      target.classList.remove(on);
+      target.setAttribute("aria-expanded", false);
+      content.style.display = "none";
+    } else {
+      titTypes.forEach(function (titType) {
+        titType.classList.remove(on);
+        titType.setAttribute("aria-expanded", false);
+      });
+      subDepths.forEach(function (subDepth) {
+        subDepth.style.display = "none";
+      });
+      target.classList.add(on);
+      target.setAttribute("aria-expanded", true);
+      content.style.display = "block";
+    }
+  }
+
+  function openLayerEvent(target) {
+    var targetLayer = ".event_modal." + target.getAttribute("data-layer");
+    var elemLayer = document.querySelector(targetLayer);
+    var on = "on";
+    elemLayer.classList.add(on);
+    elemLayer.setAttribute("tabindex", 0);
+    elemLayer.focus();
+    document.body.classList.add("layer-open");
+  }
+
+  function closeLayerEvent(target) {
+    var elemLayer = target.closest(".event_modal");
+    var reverse = "." + target.getAttribute("data-reverse");
+    var reverseBt = document.querySelector(reverse);
+    var on = "on";
+    elemLayer.classList.remove(on);
+    elemLayer.removeAttribute("tabindex");
+    //reverseBt.focus();
+    document.body.classList.remove("layer-open");
+  }
+
+  (function (window) {
+    function callOnsalePop(eventName, deviceType) {
+      /*신청서 필수 파라미터 설정*/
+      const sendData = {
+        appfKdDivsCd: "2", //신청서유형구분코드 2: O/B 전화상담
+        onlnCnslJobDivsCd: "3", //온라인상담업무구분코드 3:홈 상담
+        appfLednChnlDivsCd: "04", //신청서인입채널구분코드 04: 임직원
+        appfLednDivsCd: "02", //신청서인입구분코드 02:인티스마트홈 12:신규 11:기존가입자 13:재약정
+        appfProdSvcDivsCd: "00", //신청서상품서비스구분코드
+        custDivsCd: "I", //고객구분코드 I:개인
+        operationId: "3828123", //오퍼레이션아이디
+        calEvetNm: eventName, //이벤트id
+      };
+
+      /*호출 정보 설정*/
+      const sendInfo = {
+        name: "callOnsalePop", //호출 function name
+        type: "HI", //호출구분 (IN:인터넷,TV:IPTV, HI:스마트홈),INTV:인터넷IPTV..
+        device: deviceType, //P[PC], M[MO]
+      };
+      const sendKey = "EMPLOYEE"; //임직원용 프로그램 호출 key 값
+
+      externalServices.dispatchMessageEvent(sendKey, { info: sendInfo, data: sendData });
+    }
+
+    // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
+    window.callOnsalePop = callOnsalePop;
+  })(window);
+</script>
