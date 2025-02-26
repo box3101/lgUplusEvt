@@ -883,12 +883,110 @@
     </div>
 
     <div class="float_btn_wrap">
-      <a href="javascript:void(0)" onclick="callOnsalePop('Home_Bluevery', 'M'); return false;">
+      <a
+        class="flt_btn_cnl"
+        onclick="javascript:callOnsalePop('Home_Lifecare_MW','M'); return false;"
+        href="javascript:void(0);"
+      >
         <span>가입상담 신청</span>
       </a>
     </div>
   </div>
   <!-- //하단 고정 바 MW -->
+
+  <!-- Layer Popup -->
+  <div class="type2">
+    <div class="ui_modal_wrap event_modal event_modal_layer1">
+      <div class="ui_modal_dim ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)"></div>
+      <div class="share_layer ui_modal_container">
+        <div class="share_layer_inner">
+          <div class="share_layer_tit">
+            <img
+              src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/tabB_h5a.png"
+              alt="최대 혜택으로 받을 수 있는 인기 사은품(택1) ※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈
+              결합 기준"
+              style="width: 63.333vw; height: 29.167vw"
+            />
+            <h4 class="blind">최대 혜택으로 받을 수 있는 인기 사은품(택1)</h4>
+            <p class="blind">※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈 결합 기준</p>
+            <div class="layer_close">
+              <button
+                type="button"
+                class="ui_modal_close"
+                data-reverse="event_modal_open1"
+                onclick="closeLayerEvent(this)"
+              >
+                <span class="blind">닫기</span>
+              </button>
+            </div>
+          </div>
+          <div class="share_pop_cont">
+            <div class="popcont">
+              <ul class="imglist">
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-031933-488-F259XWsj.png"
+                    alt="모바일 신세계(이마트) 상품권, 모바일 롯데 상품권 46만원 상당"
+                  />
+                  <p class="blind">모바일 신세계(이마트) 상품권, 모바일 롯데 상품권<em>46만원 상당</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-031941-566-38wJYhFh.png"
+                    alt="LG 50인치 UHD TV (정가 956,000원) 혜택가 0원"
+                  />
+                  <p class="blind">
+                    LG 50인치 UHD TV (정가 956,000원)
+                    <em>혜택가 0원</em>
+                  </p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040622-170-yigbyFT4.png"
+                    alt="LG 오브제컬렉션 A9S 무선청소기 (정가 540,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 오브제컬렉션 A9S 무선청소기 (정가 540,000원)<em>혜택가 0원</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040626-892-3gmTZbwU.png"
+                    alt="LG 룸앤 TV (정가 360,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 룸앤 TV (정가 360,000원)<em>혜택가 0원</em></p>
+                </li>
+                <li>
+                  <img
+                    src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250108-040631-272-yI5CtSCU.png"
+                    alt="LG 오브제컬렉션 공기청정기 (정가 410,000원) 혜택가 0원"
+                  />
+                  <p class="blind">LG 오브제컬렉션 공기청정기 (정가 410,000원)<em>혜택가 0원</em></p>
+                </li>
+              </ul>
+              <div class="float_box">
+                <button
+                  onclick="javascript:callOnsalePop('Home_Lifecare_MW','M'); return false;"
+                  style="top: 0"
+                  data-gtm-event-name="button_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="플로팅 영역- 버튼 클릭"
+                  data-gtm-event-label="컨텐츠 : 상담 예약하기"
+                  data-gtm-click-location=" 플로팅 영역"
+                  data-gtm-click-text="상담 예약하기"
+                >
+                  <img
+                    src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_btn_mk_reserve.png"
+                    alt="상담 예약하기"
+                    style="width: 37.778vw; height: 11.667vw"
+                  />
+                </button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script type="text/javascript">
   (function (window) {
@@ -968,10 +1066,33 @@
       }
     }
 
+    function openLayerEvent(target) {
+      var targetLayer = ".event_modal." + target.getAttribute("data-layer");
+      var elemLayer = document.querySelector(targetLayer);
+      var on = "on";
+      elemLayer.classList.add(on);
+      elemLayer.setAttribute("tabindex", 0);
+      elemLayer.focus();
+      document.body.classList.add("layer-open");
+    }
+
+    function closeLayerEvent(target) {
+      var elemLayer = target.closest(".event_modal");
+      var reverse = "." + target.getAttribute("data-reverse");
+      var reverseBt = document.querySelector(reverse);
+      var on = "on";
+      elemLayer.classList.remove(on);
+      elemLayer.removeAttribute("tabindex");
+      //reverseBt.focus();
+      document.body.classList.remove("layer-open");
+    }
+
     // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
     window.callOnsalePop = callOnsalePop;
     window.togglesClick = togglesClick;
     window.accordianClick = accordianClick;
+    window.openLayerEvent = openLayerEvent;
+    window.closeLayerEvent = closeLayerEvent;
   })(window);
 </script>
 <!-- mw -->
