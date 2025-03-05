@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pc-80</title>
+  <title>ispark-evt-01</title>
   <!-- AOS (Animate On Scroll) CDN -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -259,7 +259,7 @@
 
     // content 불러오기
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/event/80/pc/pc-content.html", true);
+    xhr.open("GET", "/sgate/01/pc/pc-content.html", true);
     xhr.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
         document.getElementById("content").innerHTML = this.responseText;

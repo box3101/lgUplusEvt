@@ -12,42 +12,26 @@ app.get("/", (req, res) => {
 });
 
 // 이벤트 페이지 라우팅
-const events = [
-  "80",
+const sgates = [
+  "01",
 ];
 
-events.forEach((eventId) => {
+const isparks = [
+  "01",
+];
+
+sgates.forEach((sgateId) => {
   // PC 버전
-  app.get(`/event/${eventId}`, (req, res) => {
-    res.sendFile(path.join(__dirname, "public", `event/${eventId}/pc`, "common.html"));
-  });
-
-  // 모바일 버전
-  app.get(`/event/${eventId}/m`, (req, res) => {
-    res.sendFile(path.join(__dirname, "public", `event/${eventId}/mo`, "common.html"));
+  app.get(`/sgate/${sgateId}/`, (req, res) => {
+    res.sendFile(path.join(__dirname, "public", `sgate/${sgateId}/pc`, "common.html"));
   });
 });
 
-// 팝업 라우팅
-const popupPath = "popup/common";
-
-app.get(`/${popupPath}`, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", `${popupPath}/pc`, "common.html"));
-});
-
-app.get(`/${popupPath}/m`, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", `${popupPath}/mo`, "common.html"));
-});
-
-// 단말관리 라우팅
-const devicePath = "deviceManagement/common";
-
-app.get(`/deviceManagement`, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", `${devicePath}/pc`, "common.html"));
-});
-
-app.get(`/deviceManagement/m`, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", `${devicePath}/mo`, "common.html"));
+isparks.forEach((isparkId) => {
+  // PC 버전
+  app.get(`/ispark/${isparkId}/`, (req, res) => {
+    res.sendFile(path.join(__dirname, "public", `ispark/${isparkId}/pc`, "common.html"));
+  });
 });
 
 app.listen(port, () => {

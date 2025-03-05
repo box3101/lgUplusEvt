@@ -69,33 +69,22 @@
     <script>
       const port = 4000;
       const data = {
-        events: [
+        sgateEvents: [
           {
-            id: "80",
+            id: "01",
             title: "sgate 클라우드 서비스 바우처",
             type: "",
-            contentCode: "80",
+            contentCode: "01",
           },
         ],
-        popups: [
+        isparkEvents: [
           {
-            type: "STG/운영",
+            id: "01",
+            title: "시뮬리아 소개 페이지",
+            type: "",
+            contentCode: "01",
           },
-        ],
-        popups: [
-          {
-            title: "공통 팝업 - 모바일 기기 / 전시관리 / 팝업관리 / 상세보기",
-            desc: "모바일 기기 공통 팝업",
-            path: "popup/common",
-          },
-        ],
-        deviceManagement: [
-          {
-            title: "단말관리 - 공통",
-            desc: "단말관리 공통",
-            path: "deviceManagement",
-          },
-        ],
+        ]
       };
 
       // 테이블 생성 함수
@@ -122,10 +111,10 @@
       `;
       }
 
-      // 이벤트 테이블 렌더링
-      const eventsTable = createTable(
-        "이벤트 링크",
-        data.events,
+      // Sgate 이벤트 테이블 렌더링
+      const sgateEventsTable = createTable(
+        "Sgate 이벤트 링크",
+        data.sgateEvents,
         ["이벤트 ID (localhost)", "비고", "링크"],
         (event) => `
         <tr>
@@ -136,14 +125,34 @@
           </td>
           <td>${event.type}</td>
           <td>
-            <a href="http://localhost:${port}/event/${event.id}/" target="_blank">반응형</a>
+            <a href="http://localhost:${port}/sgate/${event.id}/" target="_blank">반응형</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // Ispark 이벤트 테이블 렌더링
+      const isparkEventsTable = createTable(
+        "Ispark 이벤트 링크",
+        data.isparkEvents,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+            <a href="http://localhost:${port}/ispark/${event.id}/" target="_blank">반응형</a>
           </td>
         </tr>
       `
       );
 
       // 전체 렌더링
-      document.getElementById("app").innerHTML = eventsTable ;
+      document.getElementById("app").innerHTML = sgateEventsTable + isparkEventsTable;
     </script>
   </body>
 </html>
