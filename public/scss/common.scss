@@ -1,0 +1,510 @@
+@use "sass:map";
+@use "sass:math";
+
+/***************************
+ * 유틸리티 관련 스타일
+/***************************/
+
+// 마진 및 패딩 유틸리티 클래스 생성 (1px부터 100px까지)
+@for $i from 1 through 100 {
+  // 마진 클래스
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+  .my-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+
+  // 패딩 클래스
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+
+  // 갭 클래스
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+  .gap-x-#{$i} {
+    column-gap: #{$i}px;
+  }
+  .gap-y-#{$i} {
+    row-gap: #{$i}px;
+  }
+}
+
+/***************************
+ * 이미지 관련 스타일
+ ***************************/
+
+// 이미지 하단 여백 제거 믹스인
+@mixin img-no-margin {
+  img {
+    display: block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin: 0 auto;
+  }
+}
+
+// 이미지 하단 여백 제거 유틸리티 클래스
+.img-no-margin {
+  @include img-no-margin;
+}
+
+// 이미지 반응형 스타일 믹스인
+@mixin img-responsive {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+// 이미지 반응형 유틸리티 클래스
+.img-responsive {
+  @include img-responsive;
+}
+
+/***************************
+ * 섹션 관련 스타일
+ ***************************/
+
+// 섹션 패딩 변수
+$section-padding: 100px;
+
+// 섹션 패딩 믹스인
+@mixin section-padding {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+// 섹션 클래스
+.section {
+  @include section-padding;
+}
+
+// 섹션 패딩 유틸리티 클래스
+.py-section {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+// 반응형 섹션 패딩 (모바일에서는 더 작게)
+@media (max-width: 768px) {
+  $section-padding-mobile: 50px;
+
+  .section,
+  .py-section {
+    padding-top: $section-padding-mobile;
+    padding-bottom: $section-padding-mobile;
+  }
+}
+
+/***************************
+ * 텍스트 관련 스타일
+ ***************************/
+
+.tac {
+  text-align: center;
+}
+
+/***************************
+ * 플렉스 관련 스타일
+ ***************************/
+
+.flex {
+  display: flex;
+}
+
+// 플렉스 중앙 정렬 믹스인
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 플렉스 중앙 정렬 유틸리티 클래스
+.flex-center {
+  @include flex-center;
+}
+
+// 수직 방향 플렉스 중앙 정렬
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// 수직 방향 플렉스 중앙 정렬 유틸리티 클래스
+.flex-center-column {
+  @include flex-center-column;
+}
+
+// 플렉스 align-items: center 믹스인
+@mixin flex-align-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+// 플렉스 align-items: center 유틸리티 클래스
+.flex-align-center {
+  @include flex-align-center;
+}
+
+/***************************
+ * 그리드 및 레이아웃 관련 스타일
+ ***************************/
+
+// 플렉스 4개 아이템 레이아웃 믹스인
+@mixin flex-4-items($gap-x: 40px, $gap-y: 20px) {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: $gap-x;
+  row-gap: $gap-y;
+
+  > * {
+    flex-basis: calc(25% - #{$gap-x} * 3 / 4);
+  }
+
+  @media (max-width: 768px) {
+    > * {
+      flex-basis: calc(50% - #{$gap-x} / 2) !important;
+    }
+  }
+}
+
+// 플렉스 2개 아이템 레이아웃 믹스인
+@mixin flex-2-items($gap-x: 40px, $gap-y: 20px) {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: $gap-x;
+  row-gap: $gap-y;
+
+  > * {
+    flex-basis: calc(50% - #{$gap-x} / 2);
+  }
+
+  @media (max-width: 768px) {
+    > * {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// 플렉스 1개 아이템 레이아웃 믹스인
+@mixin flex-1-item($gap-y: 20px) {
+  display: flex;
+  flex-direction: column;
+  row-gap: $gap-y;
+
+  > * {
+    flex-basis: 100%;
+  }
+}
+
+// 플렉스 4개 아이템 레이아웃 유틸리티 클래스
+.flex-4-items {
+  @include flex-4-items;
+
+  @media (max-width: 768px) {
+    > * {
+      flex-basis: calc(50% - #{40px} / 2);
+    }
+  }
+}
+
+/***************************
+ * 버튼 관련 스타일
+ ***************************/
+// 기본 버튼 스타일 믹스인
+@mixin button-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 2px solid #125de6;
+  color: #125de6;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #125de6;
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+// 배경색 버튼 스타일 믹스인
+@mixin button-bg {
+  @include button-base;
+  background-color: #449bff;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #0e4ab8;
+  }
+}
+
+// 회색 테두리 버튼 스타일 믹스인
+@mixin button-gray {
+  @include button-base;
+  border: 2px solid #333333;
+  color: #333333;
+
+  &:hover {
+    background-color: #333333;
+    color: #fff;
+  }
+}
+
+// 기본 버튼 유틸리티 클래스
+.button-base {
+  @include button-base;
+}
+
+// 배경색 버튼 유틸리티 클래스
+.button-bg {
+  @include button-bg;
+}
+
+// 버튼 중앙 정렬 믹스인
+@mixin button-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 버튼 중앙 정렬 유틸리티 클래스
+.button-center {
+  @include button-center;
+}
+
+/***************************
+ * 반응형 텍스트 관련 스타일
+ ***************************/
+.pc-only {
+  display: block !important;
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mo-only {
+  display: none !important;
+  @media (max-width: 768px) {
+    display: block !important;
+  }
+}
+
+/***************************
+ * 공통 화살표 관련 스타일
+ ***************************/
+
+i.arr-right {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='16' viewBox='0 0 10 16' fill='none'%3E%3Cpath d='M1.57157 14L8.42871 8L1.57157 2' stroke='white' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/***************************
+ * 동동 효과 애니메이션 스타일
+ ***************************/
+.dongdong-effect {
+  animation: dongdong 2s ease-in-out infinite;
+
+  @media (max-width: 768px) {
+    animation: dongdong-mobile 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes dongdong {
+  0%,
+  100% {
+    transform: translateY(-3px);
+  }
+  30% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes dongdong-mobile {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  30% {
+    transform: translateY(2px);
+  }
+}
+
+/***************************
+ * Before/After 관련 믹스인
+ ***************************/
+
+// 기본 before 믹스인
+@mixin before-element($content: "", $position: absolute) {
+  position: relative;
+
+  &:before {
+    content: $content;
+    position: $position;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 기본 after 믹스인
+@mixin after-element($content: "", $position: absolute) {
+  position: relative;
+
+  &:after {
+    content: $content;
+    position: $position;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 그라데이션 배경 before 믹스인
+@mixin gradient-before($gradient, $z-index: 0) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient;
+    z-index: $z-index;
+  }
+}
+
+// 오버레이 before 믹스인
+@mixin overlay-before($color: rgba(0, 0, 0, 0.5), $z-index: 0) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    z-index: $z-index;
+  }
+}
+
+// 리스트 불릿 스타일 믹스인
+@mixin list-bullet($bullet-type: "•", $color: inherit, $size: 1em, $spacing: 0.5em) {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: calc(#{$size} + #{$spacing});
+    font-size: $size;
+    color: $color;
+
+    &:before {
+      content: $bullet-type;
+      position: absolute;
+      left: 0;
+      font-size: $size;
+      line-height: inherit;
+
+      @include mobile-only {
+        font-size: $size - 2px;
+      }
+    }
+  }
+}
+
+// 반응형 미디어 쿼리 믹스인
+@mixin mobile-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// 태블릿 미디어 쿼리 믹스인
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// PC 미디어 쿼리 믹스인
+@mixin pc-only {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// 모바일 & 태블릿 미디어 쿼리 믹스인
+@mixin mobile-tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
