@@ -13,7 +13,7 @@
   },
   "scripts": {
     "server": "nodemon server.js",
-    "browser-sync": "browser-sync start --proxy \"localhost:3002\" --files \"public/**/*.*\" --port 3003",
+    "browser-sync": "browser-sync start --proxy \"localhost:4000\" --files \"public/**/*.css, public/**/*.html, public/**/*.js\" --port 3003",
     "scss": "sass --watch public/preOrder/mobile/scss:public/preOrder/mobile/css",
     "start": "concurrently \"npm run server\" \"npm run browser-sync\" \"npm run scss\""
   }

@@ -1,5 +1,21 @@
 {
   "liveServer.settings.port": 5501,
   "prettier.printWidth": 120,
-  "gitdoc.enabled": true
+  "gitdoc.enabled": true,
+  "html.completion.attributeDefaultValue": "doublequotes",
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double",
+  "prettier.singleQuote": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "[css]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // }
+  "editor.cursorSurroundingLines": 10,
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.scrollBeyondLastLine": false,
+  "editor.revealLine": "inCenter"
 }

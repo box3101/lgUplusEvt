@@ -4,7 +4,18 @@ const app = express();
 const port = 4000;
 
 // 정적 파일 제공을 위한 미들웨어 설정
-app.use(express.static("public"));
+app.use(
+  express.static("public", {
+    etag: false,
+    lastModified: false,
+    maxAge: "0",
+    setHeaders: (res, path) => {
+      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+      res.setHeader("Pragma", "no-cache");
+      res.setHeader("Expires", "0");
+    },
+  })
+);
 
 // HTML 파일 제공을 위한 라우트 설정
 app.get("/", (req, res) => {
@@ -12,13 +23,9 @@ app.get("/", (req, res) => {
 });
 
 // 이벤트 페이지 라우팅
-const sgates = [
-  "01",
-];
+const sgates = ["01", "02"];
 
-const isparks = [
-  "01",
-];
+const isparks = ["01"];
 
 sgates.forEach((sgateId) => {
   // PC 버전
