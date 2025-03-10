@@ -1,6 +1,9 @@
 /* Pretendard 폰트 CDN */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import "../../scss/common.scss";
+.inner {
+  max-width: 1000px;
+}
 .section,
 .py-section {
   @include mobile-only {
@@ -16,19 +19,14 @@ img.pc-only {
     display: inline-block !important;
   }
 }
-.inner {
+section .inner {
   @include mobile-only {
     text-align: center;
   }
 }
 .event-banner {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(232, 247, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0.6) 32.5%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
+  background: linear-gradient(180deg, #dcf3ff 0%, #fcfeff 44.5%, #fff 100%);
   padding-top: 70px !important;
   padding-bottom: 50px !important;
   @include mobile-only {
@@ -114,7 +112,7 @@ img.pc-only {
     }
   }
   .rewards-container {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     @include mobile-only {
       margin-top: 20px;
@@ -161,6 +159,17 @@ img.pc-only {
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 15px;
+      background: #fff;
+      display: inline-block !important;
+      color: #000;
+      width: auto;
+      padding: 4px 8px;
+      font-family: Pretendard;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px; /* 166.667% */
+      letter-spacing: -0.54px;
 
       @include mobile-only {
         border-radius: 4px;
@@ -174,7 +183,6 @@ img.pc-only {
         font-weight: 700;
         line-height: 30px; /* 200% */
         letter-spacing: -0.45px;
-        padding: 5px 0;
       }
     }
 

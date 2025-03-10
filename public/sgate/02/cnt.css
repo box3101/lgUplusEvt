@@ -7434,6 +7434,10 @@ i.arr-right {
 /***************************
  * Before/After 관련 믹스인
  ***************************/
+.inner {
+  max-width: 1000px;
+}
+
 @media (max-width: 767px) {
   .section,
   .py-section {
@@ -7452,14 +7456,14 @@ img.pc-only {
   }
 }
 @media (max-width: 767px) {
-  .inner {
+  section .inner {
     text-align: center;
   }
 }
 
 .event-banner {
   position: relative;
-  background: linear-gradient(180deg, rgba(232, 247, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 32.5%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(180deg, #dcf3ff 0%, #fcfeff 44.5%, #fff 100%);
   padding-top: 70px !important;
   padding-bottom: 50px !important;
 }
@@ -7558,7 +7562,7 @@ img.pc-only {
   }
 }
 .participate-section .rewards-container {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -7665,6 +7669,17 @@ img.pc-only {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+  background: #fff;
+  display: inline-block !important;
+  color: #000;
+  width: auto;
+  padding: 4px 8px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: -0.54px;
 }
 @media (max-width: 767px) {
   .participate-section .notice-container .notice-title {
@@ -7679,7 +7694,6 @@ img.pc-only {
     font-weight: 700;
     line-height: 30px; /* 200% */
     letter-spacing: -0.45px;
-    padding: 5px 0;
   }
 }
 .participate-section .notice-container .notice-list {
