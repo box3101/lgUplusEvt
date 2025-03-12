@@ -19,7 +19,7 @@ img.pc-only {
     display: inline-block !important;
   }
 }
-section .inner {
+.section .inner {
   @include mobile-only {
     text-align: center;
   }

@@ -7456,7 +7456,7 @@ img.pc-only {
   }
 }
 @media (max-width: 767px) {
-  section .inner {
+  .section .inner {
     text-align: center;
   }
 }
