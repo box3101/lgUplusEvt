@@ -7449,6 +7449,7 @@
   }
 
   .ispark-01__container .content .simulia-intro .title {
+    margin-top: 50px;
     color: #125de6;
     text-align: center;
     font-family: Pretendard;
@@ -8627,9 +8628,11 @@
       bottom: 4%;
     }
   }
+
   .contact-section {
     background: linear-gradient(0deg, #fff 0%, #eff5fd 39.5%, #e5f0ff 100%);
   }
+
   .contact-section .contact-container .contact-title {
     color: #000;
     text-align: center;
@@ -9191,6 +9194,10 @@
   <div class="content">
     <!-- 시뮬리아 소개 섹션 -->
     <section class="section simulia-intro inner tac" data-aos="fade-up" data-aos-duration="800">
+      <div class="logo-container">
+        <img src="https://ispark.kr/html/_skin/img/sub/simulia/3ds-logo.png" alt="다쏘시스템 로고" class="logo-3ds" />
+      </div>
+
       <h1 class="title">
         구조, 열, 전자, 유동 <br class="mo-only" />
         등의 해석 기능을 갖춘 SIMULIA
@@ -9298,11 +9305,11 @@
             <div class="icon-container">
               <img
                 src="https://ispark.kr/html/_skin/img/sub/simulia/thermal.svg"
-                alt="유체역학 및 유동"
+                alt="유동"
                 class="solution-icon dongdong-effect"
               />
             </div>
-            <h3 class="solution-title">유체역학 및 유동</h3>
+            <h3 class="solution-title">유동</h3>
             <i class="arr-right"></i></button
           ><button type="button" class="solution-item" data-target="multibody" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-container">
@@ -9345,7 +9352,7 @@
                   <span>진동/소음/NVH</span>
                 </li>
                 <li class="submenu-item" data-target="fluid">
-                  <span>유체역학 및 유동</span>
+                  <span>유동</span>
                 </li>
                 <li class="submenu-item" data-target="multibody">
                   <span>다물체동역학</span>
@@ -9366,7 +9373,7 @@
             <option value="thermal">열</option>
             <option value="optimization">최적화 및 강건설계</option>
             <option value="vibration">진동/소음/NVH</option>
-            <option value="fluid">유체역학 및 유동</option>
+            <option value="fluid">유동</option>
             <option value="multibody">다물체동역학</option>
             <option value="process">공정</option>
           </select>
@@ -10402,9 +10409,9 @@
                 <div class="case-content">
                   <h4 class="case-title">Ariens Company</h4>
                   <p class="case-description">
-                    Ariens는 시뮬리아의 Abaqus/CAE와 fe-safe를 활용해 Gravely ZT HD 잔디깎기 기계의 부품 수를 50%
-                    줄이고, 테스트 시간과 비용을 대폭 줄였습니다. 이로 인해 제품 출시 속도가 빨라졌고, 시장에서의
-                    경쟁력을 크게 높일 수 있었습니다.
+                    Ariens는 시뮬리아의 Abaqus/CAE와 fe-safe를 활용해 Gravely ZT HD 잔디 깎이기의 부품 수를 50% 줄이고,
+                    테스트 시간과 비용을 대폭 줄였습니다. 이로 인해 제품 출시 속도가 빨라졌고, 시장에서의 경쟁력을 크게
+                    높일 수 있었습니다.
                   </p>
                 </div>
                 <div class="case-image">
@@ -10480,7 +10487,7 @@
                       <div class="case-content">
                         <h4 class="case-title">Ariens Company</h4>
                         <p class="case-description">
-                          Ariens는 시뮬리아의 Abaqus/CAE와 fe-safe를 활용해 Gravely ZT HD 잔디깎기 기계의 부품 수를 50%
+                          Ariens는 시뮬리아의 Abaqus/CAE와 fe-safe를 활용해 Gravely ZT HD 잔디 깎이기의 부품 수를 50%
                           줄이고, 테스트 시간과 비용을 대폭 줄였습니다. 이로 인해 제품 출시 속도가 빨라졌고, 시장에서의
                           경쟁력을 크게 높일 수 있었습니다.
                         </p>
@@ -10714,7 +10721,7 @@
             최고의 솔루션, 지금 경험해보세요!
           </h2>
           <p class="contact-description">
-            이즈파크는 다쏘시스템의 공식 파트너사로 SIMULIA 제품을 제공하는 것에 그치지 않고 <br />
+            이즈파크는 SIMULIA 제품을 제공하는 것에 그치지 않고 <br />
             다년간의 경험을 바탕으로 고객의 문제를 깊이 이해하며, 그에 맞는 최적의 시뮬레이션 전략을 제공합니다. <br />
             이즈파크의 전문가와 함께 더 나은 솔루션을 찾아보세요.  
           </p>
@@ -10735,9 +10742,7 @@
           </div>
 
           <div class="contact-buttons" data-aos="fade-up" data-aos-delay="500">
-            <a href="https://ispark.kr/html/_skin/data/SIMULIA_Introduction.pdf" class="contact-btn" target="_blank"
-              >서비스 소개서</a
-            >
+            <a href="https://ispark.kr/html/_skin/data/SIMULIA_Introduction.pdf" class="contact-btn">서비스 소개서 신청</a>
             <a href="https://ispark.kr/customer-center/customer-inquiry" target="_blank" class="contact-btn"
               >문의하기</a
             >

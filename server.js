@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 // 이벤트 페이지 라우팅
 const sgates = ["01", "02"];
 
-const isparks = ["01"];
+const isparks = ["01", "02"];
 
 sgates.forEach((sgateId) => {
   // PC 버전
