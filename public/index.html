@@ -107,6 +107,20 @@
             type: "",
             contentCode: "04",
           },
+          {
+            id: "05",
+            title: "3D 설계 소프트웨어 CATIA 특별 프로모션",
+            type: "",
+            contentCode: "05",
+          },
+        ],
+        templateGuide: [
+          {
+            id: "01",
+            title: "템플릿 가이드",
+            type: "",
+            contentCode: "01",
+          },
         ],
       };
 
@@ -174,8 +188,28 @@
       `
       );
 
+      // 템플릿 가이드
+      const templateGuide = createTable(
+        "템플릿 가이드",
+        data.templateGuide,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+       <a href="http://localhost:${port}/ispark/templates/content-template.html" target="_blank">템플릿</a>
+          </td>
+        </tr>
+      `
+      );
+
       // 전체 렌더링
-      document.getElementById("app").innerHTML = sgateEventsTable + isparkEventsTable;
+      document.getElementById("app").innerHTML = sgateEventsTable + isparkEventsTable + templateGuide;
     </script>
   </body>
 </html>
