@@ -17,5 +17,8 @@
   "editor.cursorSurroundingLines": 10,
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.scrollBeyondLastLine": false,
-  "editor.revealLine": "inCenter"
+  "editor.revealLine": "inCenter",
+  "[php]": {
+    "editor.defaultFormatter": "lkrms.pretty-php"
+  }
 }
