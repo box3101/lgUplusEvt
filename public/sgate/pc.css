@@ -1,10 +1,10 @@
 @font-face {
   font-family: FontAwesome;
-  src: url("/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.woff2")
+  src: url("https://sgate.ispark.kr/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.woff2")
       format("woff2"),
-    url("/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.woff")
+    url("https://sgate.ispark.kr/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.woff")
       format("woff"),
-    url("/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.ttf")
+    url("https://sgate.ispark.kr/html/_skin/css/fonts/fontAwesome/fontawesome-webfont.ttf")
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -10525,7 +10525,7 @@ body.gnb-open {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: url("/html/_skin/img/common/btn-top.png") center center / auto
+  background: url("https://sgate.ispark.kr/html/_skin/img/common/btn-top.png") center center / auto
     no-repeat;
   font-size: 0px;
   line-height: 50px;
@@ -10616,7 +10616,7 @@ body.gnb-open {
   top: 1px;
   width: 20px;
   height: 100%;
-  background-image: url("/html/_skin/img/common/ico_path_arrow_right.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/common/ico_path_arrow_right.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -11962,7 +11962,7 @@ ul.footer-bottom-link li.point a {
   height: 46px;
 }
 .familySite h3 {
-  background: url("/html/_skin/img/common/plus_icon.png") right 20px center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/common/plus_icon.png") right 20px center /
     16px no-repeat;
 }
 .familySite h3 a {
@@ -12018,7 +12018,7 @@ ul.footer-bottom-link li.point a {
     color: rgb(51, 51, 51);
   }
   .familySite h3:hover {
-    background: url("/html/_skin/img/common/plus_icon.png") right 20px center /
+    background: url("https://sgate.ispark.kr/html/_skin/img/common/plus_icon.png") right 20px center /
       16px no-repeat rgb(51, 51, 51);
   }
   .footSelect ul li a:hover {
@@ -12321,7 +12321,7 @@ h6,
 }
 .bg-fixed {
   padding: 60px 0px;
-  background: url("/html/_skin/img/sub/success_bg.jpg") center center no-repeat;
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/success_bg.jpg") center center no-repeat;
 }
 .bg-fixed .tit {
   color: rgb(255, 255, 255);
@@ -12726,7 +12726,7 @@ li.accordion-wrap {
 @media (max-width: 767px) {
   .bg-fixed {
     padding: 50px 20px;
-    background: url("/html/_skin/img/sub/success_bg_m.jpg") 50% 0px / cover
+    background: url("https://sgate.ispark.kr/html/_skin/img/sub/success_bg_m.jpg") 50% 0px / cover
       no-repeat;
   }
   .bg-fixed .tit {
@@ -14374,15 +14374,15 @@ li.accordion-wrap {
   height: 658px;
 }
 .slider_item.item01 {
-  background: url("/html/_skin/img/main/img_main_visual01.jpg") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/img_main_visual01.jpg") center center /
     cover no-repeat;
 }
 .slider_item.item02 {
-  background: url("/html/_skin/img/main/img_main_visual02.jpg") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/img_main_visual02.jpg") center center /
     cover no-repeat;
 }
 .slider_item.item03 {
-  background: url("/html/_skin/img/main/img_main_visual03.jpg") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/img_main_visual03.jpg") center center /
     cover no-repeat;
 }
 .slider_item:not(:first-of-type) {
@@ -14456,7 +14456,7 @@ li.accordion-wrap {
   border-radius: 50%;
   margin-right: 15px;
   background-color: rgb(0, 170, 255);
-  background-image: url("/html/_skin/img/main/ico_video-play.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/main/ico_video-play.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center center;
@@ -14563,7 +14563,7 @@ li.accordion-wrap {
   display: inline-block;
   width: 149px;
   height: 57px;
-  background: url("/html/_skin/img/common/logo_svg.svg") center center / cover
+  background: url("https://sgate.ispark.kr/html/_skin/img/common/logo_svg.svg") center center / cover
     no-repeat;
   vertical-align: middle;
   margin-top: -10px;
@@ -14575,14 +14575,14 @@ a.btn_detail_view {
   font-size: 1.125rem;
 }
 a.btn_detail_view::after {
-  content: url("/html/_skin/img/main/ico_detail-view-right_blue.png");
+  content: url("https://sgate.ispark.kr/html/_skin/img/main/ico_detail-view-right_blue.png");
   margin-left: 15px;
 }
 a.btn_detail_view.white {
   color: rgb(255, 255, 255);
 }
 a.btn_detail_view.white::after {
-  content: url("/html/_skin/img/main/ico_detail-view-right_white.png");
+  content: url("https://sgate.ispark.kr/html/_skin/img/main/ico_detail-view-right_white.png");
 }
 @media (max-width: 767px) {
   .main_section {
@@ -14716,7 +14716,7 @@ a.btn_detail_view.white::after {
   font-weight: 500;
   border: 1px solid rgb(17, 17, 17);
   padding: 15px 85px 15px 20px;
-  background: url("/html/_skin/img/main/icon_main_section02_arrow.png") right
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/icon_main_section02_arrow.png") right
     16px center no-repeat;
   transition: 0.2s ease-in-out;
 }
@@ -14737,12 +14737,12 @@ a.btn_detail_view.white::after {
   z-index: 1;
 }
 .product_slider--fc .slick-prev {
-  background: url("/html/_skin/img/main/icon_main_product_prev.png") center
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/icon_main_product_prev.png") center
     center no-repeat;
   left: -40px;
 }
 .product_slider--fc .slick-next {
-  background: url("/html/_skin/img/main/icon_main_product_next.png") center
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/icon_main_product_next.png") center
     center no-repeat;
   right: -40px;
 }
@@ -14971,7 +14971,7 @@ a.btn_detail_view.white::after {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
-  background-image: url("/html/_skin/img/sub/no_logo.jpg");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/no_logo.jpg");
 }
 .main_product__slider__wrap .product_slider__item--fc .imgWrap--fc figure img {
   display: inline-block;
@@ -15026,7 +15026,7 @@ a.btn_detail_view.white::after {
   display: inline-block;
   width: 56px;
   height: 21px;
-  background: url("/html/_skin/img/common/logo_svg.svg") center center / cover
+  background: url("https://sgate.ispark.kr/html/_skin/img/common/logo_svg.svg") center center / cover
     no-repeat;
   vertical-align: middle;
   margin-right: 5px;
@@ -15037,7 +15037,7 @@ a.btn_detail_view.white::after {
   background-color: rgb(0, 170, 255);
 }
 .main_section.section03 .download-btn-wrap .btn_wrap a .sgate_logo {
-  background: url("/html/_skin/img/main/btn_logo-white_m.png") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/main/btn_logo-white_m.png") center center /
     cover no-repeat;
 }
 .main_section.section03 .download-btn-wrap .btn_wrap a:hover {
@@ -15343,7 +15343,7 @@ sup {
 }
 .sub-cont-header .btn_more_plus::after {
   margin-left: 5px;
-  content: url("/html/_skin/img/sub/ico_readmore-plus.png");
+  content: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_readmore-plus.png");
   vertical-align: middle;
 }
 .sub-cont-header .btn_more_plus:hover {
@@ -16122,7 +16122,7 @@ figure.img_full_wrap figcaption * {
   content: "";
   width: 100%;
   height: 25px;
-  background: url("/html/_skin/img/sub/service/bg_screen-header-1.png") right
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/service/bg_screen-header-1.png") right
     15px center / auto no-repeat rgb(48, 52, 62);
 }
 .video_box .screen-body {
@@ -16250,7 +16250,7 @@ figure.img_full_wrap figcaption * {
   }
 }
 .bg_rnd {
-  background: url("/html/_skin/img/sub/company/bg_rnd.png") center bottom /
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/company/bg_rnd.png") center bottom /
     cover no-repeat;
 }
 .rnd_txtbox {
@@ -16680,12 +16680,12 @@ figure.img_full_wrap figcaption * {
   height: 40px;
 }
 .sns_slider .slick-prev {
-  background: url("/html/_skin/img/sub/business/icon_cnc_slider_prev.png")
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/business/icon_cnc_slider_prev.png")
     center center no-repeat;
   left: 0px;
 }
 .sns_slider .slick-next {
-  background: url("/html/_skin/img/sub/business/icon_cnc_slider_next.png")
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/business/icon_cnc_slider_next.png")
     center center no-repeat;
   right: 0px;
 }
@@ -16785,7 +16785,7 @@ figure.img_full_wrap figcaption * {
   position: absolute;
   width: 21px;
   height: 15px;
-  background: url("/html/_skin/img/sub/products/icon_btn_arrow.png") center
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/products/icon_btn_arrow.png") center
     center / 100% no-repeat;
   top: 50%;
   right: 20px;
@@ -16963,7 +16963,7 @@ figure.img_full_wrap figcaption * {
     content: "";
     position: absolute;
     inset: 0px;
-    background: url("/html/_skin/img/sub/products/icon_product_list_more.png")
+    background: url("https://sgate.ispark.kr/html/_skin/img/sub/products/icon_product_list_more.png")
       center center no-repeat rgba(239, 246, 253, 0.7);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
   }
@@ -17300,7 +17300,7 @@ figure.img_full_wrap figcaption * {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: url("/html/_skin/img/sub/bg_text-line.png") left top 20px / auto
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/bg_text-line.png") left top 20px / auto
     no-repeat;
   z-index: 1;
 }
@@ -17430,11 +17430,11 @@ figure.img_full_wrap figcaption * {
 }
 .newsletter__slider__wrap .newsletter_slider .slick-slider .slick-prev {
   left: -50px;
-  background-image: url("/html/_skin/img/main/btn_slide-arrow-prev_white.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/main/btn_slide-arrow-prev_white.png");
 }
 .newsletter__slider__wrap .newsletter_slider .slick-slider .slick-next {
   right: -50px;
-  background-image: url("/html/_skin/img/main/btn_slide-arrow-next_white.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/main/btn_slide-arrow-next_white.png");
 }
 .newsletter__slider__wrap .slider02 .gallery-list--fc figure:first-child {
   display: none;
@@ -17583,7 +17583,7 @@ figure.img_full_wrap figcaption * {
   padding: 25px 0px;
   display: flex;
   flex-flow: row-reverse wrap;
-  background: url("/html/_skin/img/sub/ico_notice-plus.png") right 30px center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_notice-plus.png") right 30px center /
     22px no-repeat rgb(243, 243, 243);
 }
 .basic-board-list-ul--fc > li .board-subject--fc {
@@ -17664,12 +17664,12 @@ figure.img_full_wrap figcaption * {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 40px center;
-  background-image: url("/html/_skin/img/sub/icon_accordion_plus.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/icon_accordion_plus.png");
 }
 .accodian-list--tit.on {
   color: rgb(255, 255, 255);
   background-color: rgb(0, 170, 255);
-  background-image: url("/html/_skin/img/sub/icon_accordion_minus.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/icon_accordion_minus.png");
 }
 @media (max-width: 767px) {
   .accodian-list .accodian-list--conts {
@@ -17730,7 +17730,7 @@ figure.img_full_wrap figcaption * {
   }
 }
 .customer-list--fc .imgUl--fc > li .imgUl__inner--fc .interview__btn::after {
-  content: url("/html/_skin/img/sub/ico_partners-plus.png");
+  content: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_partners-plus.png");
   margin-left: 4px;
 }
 .customer-list--fc .imgUl--fc > li:hover .imgUl__inner--fc {
@@ -17794,7 +17794,7 @@ body.popup #header {
   top: 0px;
   width: 40px;
   height: 40px;
-  background: url("/html/_skin/img/sub/ico_close.png") center center / auto
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_close.png") center center / auto
     no-repeat;
 }
 .popup__wrap .popup__body {
@@ -17893,7 +17893,7 @@ body.popup #header {
   position: absolute;
   left: 20px;
   top: 12px;
-  content: url("/html/_skin/img/sub/ico_check.png");
+  content: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_check.png");
 }
 .check_ul li + li {
   margin-top: 10px;
@@ -19084,7 +19084,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: url("/html/_skin/img/icons/ico_zoom.png") center center / 69px
+  background: url("https://sgate.ispark.kr/html/_skin/img/icons/ico_zoom.png") center center / 69px
     no-repeat;
   transition: 0.3s linear;
   z-index: 2;
@@ -19141,7 +19141,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   height: 100%;
   left: 0px;
   top: 0px;
-  background: url("/html/_skin/img/sub/ico_play_circle.png") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_play_circle.png") center center /
     100px 100px no-repeat;
   z-index: 3;
   transition: 0.5s;
@@ -19587,7 +19587,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
     left: calc(50% - 30px);
     width: 60px;
     height: 60px;
-    background: url("/html/_skin/img/sub/products/ico_plus-box.png") center
+    background: url("https://sgate.ispark.kr/html/_skin/img/sub/products/ico_plus-box.png") center
       center / auto no-repeat;
     z-index: 2;
   }
@@ -19642,7 +19642,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   right: 0px;
   width: 60px;
   height: 60px;
-  background: url("/html/_skin/img/sub/ico_close-white.png") center center /
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_close-white.png") center center /
     25px no-repeat rgba(0, 0, 0, 0.6);
 }
 .page-url-certification-status--fc .arrow__list .slick-arrow {
@@ -19654,12 +19654,12 @@ input[type="file"]::-webkit-file-upload-button:focus {
 }
 .page-url-certification-status--fc .arrow__list .prev__arrow {
   left: -100px;
-  background: url("/html/_skin/img/sub/ico_slider-circle-prev_sm.png") center
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_slider-circle-prev_sm.png") center
     center / cover no-repeat;
 }
 .page-url-certification-status--fc .arrow__list .next__arrow {
   right: -100px;
-  background: url("/html/_skin/img/sub/ico_slider-circle-next_sm.png") center
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/ico_slider-circle-next_sm.png") center
     center / cover no-repeat;
 }
 .page-url-certification-status--fc .slider-nav-thumbnails {
@@ -19868,7 +19868,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   top: 0px;
   width: 30px;
   height: 100%;
-  background: url("/html/_skin/img/sub/team-sgate/ico_arrow.svg") center center
+  background: url("https://sgate.ispark.kr/html/_skin/img/sub/team-sgate/ico_arrow.svg") center center
     no-repeat;
 }
 .sub-cont-section ul.process-box li:first-child::before {
@@ -19933,7 +19933,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
     top: 100%;
     width: 28px;
     height: 20px;
-    background: url("/html/_skin/img/sub/team-sgate/ico_arrow.svg") center
+    background: url("https://sgate.ispark.kr/html/_skin/img/sub/team-sgate/ico_arrow.svg") center
       center / 14px no-repeat;
     transform: rotate(90deg);
   }
@@ -20876,7 +20876,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   display: inline-block;
   width: 56px;
   height: 21px;
-  background: url("/html/_skin/img/common/logo_svg_w.svg") center center / cover
+  background: url("https://sgate.ispark.kr/html/_skin/img/common/logo_svg_w.svg") center center / cover
     no-repeat;
   vertical-align: middle;
   margin-right: 5px;
@@ -20941,7 +20941,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   .slick-slider
   .slick-prev {
   left: -50px;
-  background-image: url("/html/_skin/img/main/btn_slide-arrow-prev_gray.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/main/btn_slide-arrow-prev_gray.png");
 }
 .ts-contents-list-wrap
   .newsletter__slider__wrap
@@ -20949,7 +20949,7 @@ input[type="file"]::-webkit-file-upload-button:focus {
   .slick-slider
   .slick-next {
   right: -50px;
-  background-image: url("/html/_skin/img/main/btn_slide-arrow-next_gray.png");
+  background-image: url("https://sgate.ispark.kr/html/_skin/img/main/btn_slide-arrow-next_gray.png");
 }
 .ts-evaluation-wrap {
   display: flex;
