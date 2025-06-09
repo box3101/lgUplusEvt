@@ -620,7 +620,7 @@
     }
 
     .master-period {
-      width: 380px;
+      width: 410px;
       height: 56px;
       padding: 4px var(--spacing-md);
       font-size: var(--font-size-2xl);
@@ -823,7 +823,7 @@
             제도부터 시스템까지! <br class="mo-only" />
             손에 잡히는 <span>&#39;성과관리·평가 실전 교육&#39;</span>
           </p>
-          <p class="master-period"><span>오프라인 교육 신청</span> : ~6월 16(월)</p>
+          <p class="master-period"><span>오프라인 교육 신청</span> : ~6월 16일(월)</p>
         </div>
 
         <div class="master-class-content">
@@ -910,7 +910,7 @@
       </div>
     </div>
   </div>
-  <div class="section section-02">
+  <div class="section section-02" id="education-section">
     <div class="inner">
       <div class="education-section" data-aos="fade-up">
         <h2 class="section-title">교육 구성</h2>
@@ -1066,7 +1066,7 @@
             </li>
             <li>
               <strong>참여신청</strong>
-              <span>~ 6월 13일(금)</span>
+              <span>~ 6월 16일(월)</span>
             </li>
           </ul>
         </div>
@@ -1088,6 +1088,39 @@
 <!-- 배너 EEE-->
 
 <script>
+  document.head.insertAdjacentHTML(
+    "beforeend",
+    `
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+`
+  );
+
+  // URL 해시를 통한 커리큘럼 섹션 이동 처리
+  function handleHashNavigation() {
+    const hash = window.location.hash;
+    if (hash === "#education-section" || hash === "#curriculum") {
+      const educationSection = document.getElementById("education-section");
+      if (educationSection) {
+        // 약간의 지연 후 스크롤 (페이지 로딩 완료 대기)
+        setTimeout(() => {
+          educationSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    }
+  }
+
+  // 페이지 로드 시 해시 확인
+  document.addEventListener("DOMContentLoaded", handleHashNavigation);
+
+  // 해시 변경 시 처리 (뒤로가기/앞으로가기 대응)
+  window.addEventListener("hashchange", handleHashNavigation);
   AOS.init({
     once: true,
     duration: 500,
