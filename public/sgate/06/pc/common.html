@@ -7,7 +7,8 @@
     <!-- 이모지 폰트 지원 -->
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+          "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       }
     </style>
     <!-- AOS (Animate On Scroll) CDN -->
@@ -330,7 +331,7 @@
 
       // content 불러오기
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "/sgate/05/pc/pc-content.html", true);
+      xhr.open("GET", "/sgate/06/pc/pc-content.html", true);
       xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           document.getElementById("content").innerHTML = this.responseText;
